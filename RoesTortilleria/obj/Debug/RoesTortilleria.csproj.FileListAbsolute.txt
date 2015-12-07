@@ -1,0 +1,10 @@
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\bin\Debug\RoesTortilleria.exe.config
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\bin\Debug\RoesTortilleria.exe
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\bin\Debug\RoesTortilleria.pdb
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.csprojResolveAssemblyReference.cache
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.Properties.Resources.resources
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.csproj.GenerateResource.Cache
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.exe
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.pdb
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.views.LoginModule.resources
+c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.views.MainModule.resources
