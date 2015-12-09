@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddVentaModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVentaModule.Designer.cs">
+      <DependentUpon>AddVentaModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ColorTabel.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="Datos.cs" />
     <Compile Include="views\LoginModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +69,12 @@
     <Compile Include="views\MainModule.Designer.cs">
       <DependentUpon>MainModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="Xbutton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="AddVentaModule.resx">
+      <DependentUpon>AddVentaModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\LoginModule.resx">
       <DependentUpon>LoginModule.cs</DependentUpon>
     </EmbeddedResource>

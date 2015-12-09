@@ -17,7 +17,7 @@ namespace RoesTortilleria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainModule());
+            Application.Run(new AddVentaModule());
         }
     }
 }

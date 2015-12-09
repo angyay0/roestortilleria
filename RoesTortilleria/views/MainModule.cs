@@ -17,5 +17,9 @@ namespace RoesTortilleria.views
             InitializeComponent();
         }
 
+        private void addVenta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

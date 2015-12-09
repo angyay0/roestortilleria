@@ -8,3 +8,14 @@ c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortill
 c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.pdb
 c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.views.LoginModule.resources
 c:\users\angel\documents\visual studio 2015\Projects\RoesTortilleria\RoesTortilleria\obj\Debug\RoesTortilleria.views.MainModule.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\bin\Debug\RoesTortilleria.exe.config
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.exe
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.pdb
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\bin\Debug\RoesTortilleria.exe
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\bin\Debug\RoesTortilleria.pdb
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.csprojResolveAssemblyReference.cache
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.LoginModule.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.Properties.Resources.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.MainModule.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.csproj.GenerateResource.Cache
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.AddVentaModule.resources

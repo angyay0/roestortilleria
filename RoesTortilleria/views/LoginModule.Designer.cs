@@ -40,43 +40,49 @@
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(154, 309);
+            this.username.Location = new System.Drawing.Point(116, 251);
+            this.username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(171, 22);
+            this.username.Size = new System.Drawing.Size(129, 20);
             this.username.TabIndex = 0;
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(154, 347);
+            this.password.Location = new System.Drawing.Point(116, 282);
+            this.password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.password.Name = "password";
             this.password.PasswordChar = '*';
-            this.password.Size = new System.Drawing.Size(171, 22);
+            this.password.Size = new System.Drawing.Size(129, 20);
             this.password.TabIndex = 1;
             // 
             // loginbtn
             // 
-            this.loginbtn.Location = new System.Drawing.Point(347, 309);
+            this.loginbtn.Location = new System.Drawing.Point(260, 251);
+            this.loginbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(92, 60);
+            this.loginbtn.Size = new System.Drawing.Size(69, 49);
             this.loginbtn.TabIndex = 2;
             this.loginbtn.Text = "Entrar";
             this.loginbtn.UseVisualStyleBackColor = true;
+            this.loginbtn.Click += new System.EventHandler(this.loginbtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(52, 312);
+            this.label1.Location = new System.Drawing.Point(39, 254);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Usuario";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 347);
+            this.label2.Location = new System.Drawing.Point(39, 282);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
             // 
@@ -84,17 +90,18 @@
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(10, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(470, 270);
+            this.pictureBox1.Size = new System.Drawing.Size(352, 219);
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
             // LoginModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 391);
+            this.ClientSize = new System.Drawing.Size(370, 318);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -102,6 +109,7 @@
             this.Controls.Add(this.password);
             this.Controls.Add(this.username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LoginModule";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -110,6 +118,10 @@
 
         }
 
+        private void LogInSystem()
+        {
+
+        }
         #endregion
 
         private System.Windows.Forms.TextBox username;
