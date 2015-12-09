@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddVentaModule));
+            ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             this.conceptoCombo = new System.Windows.Forms.ComboBox();
             this.colorNaranja = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
@@ -38,6 +39,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.kilosNormal = new System.Windows.Forms.TextBox();
+            this.kilosSabor = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.precioNormal = new System.Windows.Forms.TextBox();
+            this.precioSabor = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Total = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.xButton1 = new ManiXButton.XButton();
             ((System.ComponentModel.ISupportInitialize)(this.colorNaranja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -100,10 +112,6 @@
             // 
             this.cuotaCombo.Enabled = false;
             this.cuotaCombo.FormattingEnabled = true;
-            this.cuotaCombo.Items.AddRange(new object[] {
-            "800gr",
-            "900gr",
-            "Especial"});
             this.cuotaCombo.Location = new System.Drawing.Point(201, 141);
             this.cuotaCombo.Name = "cuotaCombo";
             this.cuotaCombo.Size = new System.Drawing.Size(121, 21);
@@ -137,11 +145,130 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Cuota:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(10, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Normal : ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(10, 246);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Sabor : ";
+            // 
+            // kilosNormal
+            // 
+            this.kilosNormal.Location = new System.Drawing.Point(65, 213);
+            this.kilosNormal.Name = "kilosNormal";
+            this.kilosNormal.Size = new System.Drawing.Size(48, 20);
+            this.kilosNormal.TabIndex = 12;
+            // 
+            // kilosSabor
+            // 
+            this.kilosSabor.Location = new System.Drawing.Point(65, 246);
+            this.kilosSabor.Name = "kilosSabor";
+            this.kilosSabor.Size = new System.Drawing.Size(48, 20);
+            this.kilosSabor.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(72, 195);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 13);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "Kilos";
+            // 
+            // precioNormal
+            // 
+            this.precioNormal.Location = new System.Drawing.Point(119, 213);
+            this.precioNormal.Name = "precioNormal";
+            this.precioNormal.Size = new System.Drawing.Size(76, 20);
+            this.precioNormal.TabIndex = 15;
+            // 
+            // precioSabor
+            // 
+            this.precioSabor.Location = new System.Drawing.Point(121, 248);
+            this.precioSabor.Name = "precioSabor";
+            this.precioSabor.Size = new System.Drawing.Size(74, 20);
+            this.precioSabor.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(136, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Precio";
+            // 
+            // Total
+            // 
+            this.Total.Location = new System.Drawing.Point(121, 279);
+            this.Total.Name = "Total";
+            this.Total.Size = new System.Drawing.Size(73, 20);
+            this.Total.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(72, 282);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Total : ";
+            // 
+            // xButton1
+            // 
+            office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Red1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Red1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Red1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Red1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.TextColor = System.Drawing.Color.White;
+            this.xButton1.ColorTable = office2010Red1;
+            this.xButton1.Location = new System.Drawing.Point(213, 280);
+            this.xButton1.Name = "xButton1";
+            this.xButton1.Size = new System.Drawing.Size(89, 18);
+            this.xButton1.TabIndex = 20;
+            this.xButton1.Text = "Agregar Venta";
+            this.xButton1.Theme = ManiXButton.Theme.MSOffice2010_RED;
+            this.xButton1.UseVisualStyleBackColor = true;
+            // 
             // AddVentaModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 303);
+            this.ClientSize = new System.Drawing.Size(343, 311);
+            this.Controls.Add(this.xButton1);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Total);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.precioSabor);
+            this.Controls.Add(this.precioNormal);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.kilosSabor);
+            this.Controls.Add(this.kilosNormal);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -170,5 +297,16 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox kilosNormal;
+        private System.Windows.Forms.TextBox kilosSabor;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox precioNormal;
+        private System.Windows.Forms.TextBox precioSabor;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox Total;
+        private System.Windows.Forms.Label label9;
+        private ManiXButton.XButton xButton1;
     }
 }
