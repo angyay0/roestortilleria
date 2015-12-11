@@ -7,7 +7,7 @@ namespace RoesTortilleria
     {
         int toritllaNormal;
         int tortillaSabor;
-        int total;
+        int kilostotal;
         String getCombo = "";
         public AddVentaModule()
         {
@@ -29,14 +29,14 @@ namespace RoesTortilleria
             Object selectedItem = conceptoCombo.SelectedItem;
             getCombo = selectedItem.ToString();
 
-            if(getCombo == "Cliente")
+            /*if(getCombo == "Cliente")
             {
                 clientesCombo.Enabled = true;
                 cuotaCombo.Enabled = true;
                 kilosNormal.Enabled = true;
                 kilosSabor.Enabled = true;
-            }
-            else if(getCombo == "Mostrador")
+            }*/
+            if(getCombo == "Mostrador")
             {
                 clientesCombo.Enabled = false;
                 cuotaCombo.Enabled = false;
@@ -75,9 +75,24 @@ namespace RoesTortilleria
         {
 
             DateTime localDate = DateTime.Now;
-            toritllaNormal = Convert.ToInt32(kilosNormal.Text);
-            tortillaSabor = Convert.ToInt32(kilosSabor.Text);
-            MessageBox.Show("Tortilla Normal: "+ toritllaNormal + "\n"+"Tortilla de Sabor: "+tortillaSabor+"\n"+localDate);
+            if (kilosNormal.Text == null)
+            {
+                toritllaNormal = 0 ;
+            }
+            else
+            {
+                toritllaNormal = Convert.ToInt32(kilosNormal.Text);
+            }
+            if(kilosSabor.Text == null)
+            {
+                tortillaSabor = 0;
+            }
+            else
+            {
+                tortillaSabor = Convert.ToInt32(kilosSabor.Text);
+            }
+            kilostotal = toritllaNormal + tortillaSabor;
+            MessageBox.Show( localDate + "\n" + "Tortilla Normal: " + toritllaNormal + "\n"+"Tortilla de Sabor: "+tortillaSabor+ "\n" +"Kilos totales: " +kilostotal);
         }
     }
 }
