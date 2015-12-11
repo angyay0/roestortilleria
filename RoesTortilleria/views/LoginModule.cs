@@ -19,7 +19,7 @@ namespace RoesTortilleria.views
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            if (Datos.LogIn(username.Text, password.Text)>0)
+            if (Datos.LogIn(username.Text, password.Text))
             {
 
                 MainModule main = new MainModule();

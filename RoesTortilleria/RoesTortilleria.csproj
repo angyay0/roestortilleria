@@ -46,13 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddVentaModule.cs">
+    <Compile Include="ROESDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ROESDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddClienteModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddVentaModule.Designer.cs">
+    <Compile Include="views\AddClienteModule.Designer.cs">
+      <DependentUpon>AddClienteModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddGastoModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddGastoModule.Designer.cs">
+      <DependentUpon>AddGastoModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddInventarioModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddInventarioModule.Designer.cs">
+      <DependentUpon>AddInventarioModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddProduccionModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddProduccionModule.Designer.cs">
+      <DependentUpon>AddProduccionModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\AddVentaModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AddVentaModule.Designer.cs">
       <DependentUpon>AddVentaModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="ColorTabel.cs" />
+    <Compile Include="views\ColorTabel.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="views\LoginModule.cs">
@@ -69,10 +98,22 @@
     <Compile Include="views\MainModule.Designer.cs">
       <DependentUpon>MainModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Xbutton.cs">
+    <Compile Include="views\Xbutton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="AddVentaModule.resx">
+    <EmbeddedResource Include="views\AddClienteModule.resx">
+      <DependentUpon>AddClienteModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddGastoModule.resx">
+      <DependentUpon>AddGastoModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddInventarioModule.resx">
+      <DependentUpon>AddInventarioModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddProduccionModule.resx">
+      <DependentUpon>AddProduccionModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AddVentaModule.resx">
       <DependentUpon>AddVentaModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\LoginModule.resx">
@@ -99,6 +140,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ROESDataSet.xsc">
+      <DependentUpon>ROESDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ROESDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ROESDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ROESDataSet.xss">
+      <DependentUpon>ROESDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

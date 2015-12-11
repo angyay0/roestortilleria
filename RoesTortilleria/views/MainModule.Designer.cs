@@ -28,28 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainModule));
             ManiXButton.Office2010Green office2010Green1 = new ManiXButton.Office2010Green();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainModule));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.addVenta = new ManiXButton.XButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.datePickerVenta = new System.Windows.Forms.DateTimePicker();
             this.tableVenta = new System.Windows.Forms.TableLayoutPanel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.cantidadMostrador = new System.Windows.Forms.TextBox();
+            this.cantidad_800 = new System.Windows.Forms.TextBox();
+            this.cantidad_900 = new System.Windows.Forms.TextBox();
             this.tabCorte = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.tabProduc = new System.Windows.Forms.TabPage();
+            this.addProduccion = new ManiXButton.XButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.datePickerProd = new System.Windows.Forms.DateTimePicker();
             this.tableProd = new System.Windows.Forms.TableLayoutPanel();
             this.tabAlmacen = new System.Windows.Forms.TabPage();
+            this.addInventario = new ManiXButton.XButton();
             this.label8 = new System.Windows.Forms.Label();
             this.tableInventario = new System.Windows.Forms.TableLayoutPanel();
             this.tabGastos = new System.Windows.Forms.TabPage();
+            this.addGasto = new ManiXButton.XButton();
             this.label9 = new System.Windows.Forms.Label();
             this.tableGastos = new System.Windows.Forms.TableLayoutPanel();
             this.tabClientes = new System.Windows.Forms.TabPage();
+            this.addCliente = new ManiXButton.XButton();
             this.tableCliente = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
             this.tabFactNot = new System.Windows.Forms.TabPage();
@@ -57,9 +74,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.addVenta = new ManiXButton.XButton();
+            this.especial_cantidad = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabVenta.SuspendLayout();
+            this.tableVenta.SuspendLayout();
             this.tabCorte.SuspendLayout();
             this.tabProduc.SuspendLayout();
             this.tabAlmacen.SuspendLayout();
@@ -101,6 +119,35 @@
             this.tabVenta.TabIndex = 2;
             this.tabVenta.Text = "Ventas";
             // 
+            // addVenta
+            // 
+            office2010Green1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Green1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Green1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Green1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Green1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Green1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Green1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green1.TextColor = System.Drawing.Color.White;
+            this.addVenta.ColorTable = office2010Green1;
+            this.addVenta.Location = new System.Drawing.Point(626, 129);
+            this.addVenta.Name = "addVenta";
+            this.addVenta.Size = new System.Drawing.Size(78, 39);
+            this.addVenta.TabIndex = 4;
+            this.addVenta.Text = "Agregar Venta";
+            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addVenta.UseVisualStyleBackColor = true;
+            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -140,6 +187,19 @@
             this.tableVenta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableVenta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableVenta.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableVenta.Controls.Add(this.label12, 0, 0);
+            this.tableVenta.Controls.Add(this.label13, 1, 0);
+            this.tableVenta.Controls.Add(this.label14, 2, 0);
+            this.tableVenta.Controls.Add(this.label15, 3, 0);
+            this.tableVenta.Controls.Add(this.label16, 4, 0);
+            this.tableVenta.Controls.Add(this.label17, 0, 1);
+            this.tableVenta.Controls.Add(this.label18, 0, 2);
+            this.tableVenta.Controls.Add(this.label19, 0, 3);
+            this.tableVenta.Controls.Add(this.label20, 0, 4);
+            this.tableVenta.Controls.Add(this.cantidadMostrador, 1, 1);
+            this.tableVenta.Controls.Add(this.cantidad_800, 1, 2);
+            this.tableVenta.Controls.Add(this.cantidad_900, 1, 3);
+            this.tableVenta.Controls.Add(this.especial_cantidad, 1, 4);
             this.tableVenta.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableVenta.Location = new System.Drawing.Point(24, 129);
             this.tableVenta.Margin = new System.Windows.Forms.Padding(2);
@@ -152,6 +212,126 @@
             this.tableVenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableVenta.Size = new System.Drawing.Size(597, 232);
             this.tableVenta.TabIndex = 0;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(34, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Concepto";
+            // 
+            // label13
+            // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(154, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Cantidad";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(276, 17);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(40, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Normal";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(397, 17);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(35, 13);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "Sabor";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(516, 17);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Monto";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(33, 62);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(54, 13);
+            this.label17.TabIndex = 5;
+            this.label17.Text = "Mostrador";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(43, 107);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(34, 13);
+            this.label18.TabIndex = 6;
+            this.label18.Text = "800gr";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(43, 152);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(34, 13);
+            this.label19.TabIndex = 7;
+            this.label19.Text = "900gr";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(37, 199);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(47, 13);
+            this.label20.TabIndex = 8;
+            this.label20.Text = "Especial";
+            // 
+            // cantidadMostrador
+            // 
+            this.cantidadMostrador.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cantidadMostrador.Enabled = false;
+            this.cantidadMostrador.Location = new System.Drawing.Point(124, 59);
+            this.cantidadMostrador.Name = "cantidadMostrador";
+            this.cantidadMostrador.Size = new System.Drawing.Size(109, 20);
+            this.cantidadMostrador.TabIndex = 9;
+            this.cantidadMostrador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cantidad_800
+            // 
+            this.cantidad_800.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cantidad_800.Enabled = false;
+            this.cantidad_800.Location = new System.Drawing.Point(124, 104);
+            this.cantidad_800.Name = "cantidad_800";
+            this.cantidad_800.Size = new System.Drawing.Size(109, 20);
+            this.cantidad_800.TabIndex = 10;
+            this.cantidad_800.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // cantidad_900
+            // 
+            this.cantidad_900.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cantidad_900.Enabled = false;
+            this.cantidad_900.Location = new System.Drawing.Point(128, 149);
+            this.cantidad_900.Name = "cantidad_900";
+            this.cantidad_900.Size = new System.Drawing.Size(100, 20);
+            this.cantidad_900.TabIndex = 11;
             // 
             // tabCorte
             // 
@@ -178,6 +358,7 @@
             // tabProduc
             // 
             this.tabProduc.BackColor = System.Drawing.SystemColors.Control;
+            this.tabProduc.Controls.Add(this.addProduccion);
             this.tabProduc.Controls.Add(this.label7);
             this.tabProduc.Controls.Add(this.label6);
             this.tabProduc.Controls.Add(this.datePickerProd);
@@ -189,6 +370,18 @@
             this.tabProduc.Size = new System.Drawing.Size(713, 408);
             this.tabProduc.TabIndex = 4;
             this.tabProduc.Text = "Producción del Día";
+            // 
+            // addProduccion
+            // 
+            this.addProduccion.ColorTable = office2010Green1;
+            this.addProduccion.Location = new System.Drawing.Point(535, 257);
+            this.addProduccion.Name = "addProduccion";
+            this.addProduccion.Size = new System.Drawing.Size(120, 24);
+            this.addProduccion.TabIndex = 7;
+            this.addProduccion.Text = "Agregar Producción";
+            this.addProduccion.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addProduccion.UseVisualStyleBackColor = true;
+            this.addProduccion.Click += new System.EventHandler(this.addProduccion_Click);
             // 
             // label7
             // 
@@ -243,6 +436,7 @@
             // tabAlmacen
             // 
             this.tabAlmacen.BackColor = System.Drawing.SystemColors.Control;
+            this.tabAlmacen.Controls.Add(this.addInventario);
             this.tabAlmacen.Controls.Add(this.label8);
             this.tabAlmacen.Controls.Add(this.tableInventario);
             this.tabAlmacen.Location = new System.Drawing.Point(4, 22);
@@ -252,6 +446,18 @@
             this.tabAlmacen.Size = new System.Drawing.Size(713, 408);
             this.tabAlmacen.TabIndex = 3;
             this.tabAlmacen.Text = "Almacen";
+            // 
+            // addInventario
+            // 
+            this.addInventario.ColorTable = office2010Green1;
+            this.addInventario.Location = new System.Drawing.Point(581, 372);
+            this.addInventario.Name = "addInventario";
+            this.addInventario.Size = new System.Drawing.Size(75, 31);
+            this.addInventario.TabIndex = 9;
+            this.addInventario.Text = "Agregar a Inventario";
+            this.addInventario.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addInventario.UseVisualStyleBackColor = true;
+            this.addInventario.Click += new System.EventHandler(this.addInventario_Click);
             // 
             // label8
             // 
@@ -288,6 +494,7 @@
             // tabGastos
             // 
             this.tabGastos.BackColor = System.Drawing.SystemColors.Control;
+            this.tabGastos.Controls.Add(this.addGasto);
             this.tabGastos.Controls.Add(this.label9);
             this.tabGastos.Controls.Add(this.tableGastos);
             this.tabGastos.Location = new System.Drawing.Point(4, 22);
@@ -297,6 +504,18 @@
             this.tabGastos.Size = new System.Drawing.Size(713, 408);
             this.tabGastos.TabIndex = 5;
             this.tabGastos.Text = "Gastos";
+            // 
+            // addGasto
+            // 
+            this.addGasto.ColorTable = office2010Green1;
+            this.addGasto.Location = new System.Drawing.Point(580, 376);
+            this.addGasto.Name = "addGasto";
+            this.addGasto.Size = new System.Drawing.Size(75, 27);
+            this.addGasto.TabIndex = 8;
+            this.addGasto.Text = "Agregar Gasto";
+            this.addGasto.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addGasto.UseVisualStyleBackColor = true;
+            this.addGasto.Click += new System.EventHandler(this.addGasto_Click);
             // 
             // label9
             // 
@@ -334,6 +553,7 @@
             // tabClientes
             // 
             this.tabClientes.BackColor = System.Drawing.SystemColors.Control;
+            this.tabClientes.Controls.Add(this.addCliente);
             this.tabClientes.Controls.Add(this.tableCliente);
             this.tabClientes.Controls.Add(this.label10);
             this.tabClientes.Location = new System.Drawing.Point(4, 22);
@@ -343,6 +563,18 @@
             this.tabClientes.Size = new System.Drawing.Size(713, 408);
             this.tabClientes.TabIndex = 1;
             this.tabClientes.Text = "Clientes";
+            // 
+            // addCliente
+            // 
+            this.addCliente.ColorTable = office2010Green1;
+            this.addCliente.Location = new System.Drawing.Point(58, 100);
+            this.addCliente.Name = "addCliente";
+            this.addCliente.Size = new System.Drawing.Size(96, 23);
+            this.addCliente.TabIndex = 11;
+            this.addCliente.Text = "Agregar Cliente";
+            this.addCliente.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addCliente.UseVisualStyleBackColor = true;
+            this.addCliente.Click += new System.EventHandler(this.addCliente_Click);
             // 
             // tableCliente
             // 
@@ -431,34 +663,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Jorge Armando Rojas Montero";
             // 
-            // addVenta
+            // especial_cantidad
             // 
-            office2010Green1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Green1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Green1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Green1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Green1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Green1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Green1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green1.TextColor = System.Drawing.Color.White;
-            this.addVenta.ColorTable = office2010Green1;
-            this.addVenta.Location = new System.Drawing.Point(626, 129);
-            this.addVenta.Name = "addVenta";
-            this.addVenta.Size = new System.Drawing.Size(78, 39);
-            this.addVenta.TabIndex = 4;
-            this.addVenta.Text = "Agregar Venta";
-            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addVenta.UseVisualStyleBackColor = true;
-            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
+            this.especial_cantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.especial_cantidad.Enabled = false;
+            this.especial_cantidad.Location = new System.Drawing.Point(128, 196);
+            this.especial_cantidad.Name = "especial_cantidad";
+            this.especial_cantidad.Size = new System.Drawing.Size(100, 20);
+            this.especial_cantidad.TabIndex = 12;
             // 
             // MainModule
             // 
@@ -476,6 +688,8 @@
             this.tabControl.ResumeLayout(false);
             this.tabVenta.ResumeLayout(false);
             this.tabVenta.PerformLayout();
+            this.tableVenta.ResumeLayout(false);
+            this.tableVenta.PerformLayout();
             this.tabCorte.ResumeLayout(false);
             this.tabCorte.PerformLayout();
             this.tabProduc.ResumeLayout(false);
@@ -524,5 +738,22 @@
         private System.Windows.Forms.TableLayoutPanel tableCliente;
         private System.Windows.Forms.Label label11;
         private ManiXButton.XButton addVenta;
+        private ManiXButton.XButton addProduccion;
+        private ManiXButton.XButton addInventario;
+        private ManiXButton.XButton addGasto;
+        private ManiXButton.XButton addCliente;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox cantidadMostrador;
+        private System.Windows.Forms.TextBox cantidad_800;
+        private System.Windows.Forms.TextBox cantidad_900;
+        private System.Windows.Forms.TextBox especial_cantidad;
     }
 }

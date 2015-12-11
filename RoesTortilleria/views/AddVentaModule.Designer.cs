@@ -49,7 +49,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.xButton1 = new ManiXButton.XButton();
+            this.addVenta = new ManiXButton.XButton();
             ((System.ComponentModel.ISupportInitialize)(this.colorNaranja)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
@@ -117,6 +117,7 @@
             this.cuotaCombo.Size = new System.Drawing.Size(121, 21);
             this.cuotaCombo.TabIndex = 6;
             this.cuotaCombo.Text = "Cuota";
+            this.cuotaCombo.SelectedIndexChanged += new System.EventHandler(this.cuotaCombo_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -169,6 +170,7 @@
             this.kilosNormal.Name = "kilosNormal";
             this.kilosNormal.Size = new System.Drawing.Size(48, 20);
             this.kilosNormal.TabIndex = 12;
+            this.kilosNormal.TextChanged += new System.EventHandler(this.kilosNormal_TextChanged);
             // 
             // kilosSabor
             // 
@@ -176,6 +178,7 @@
             this.kilosSabor.Name = "kilosSabor";
             this.kilosSabor.Size = new System.Drawing.Size(48, 20);
             this.kilosSabor.TabIndex = 13;
+            this.kilosSabor.TextChanged += new System.EventHandler(this.kilosSabor_TextChanged);
             // 
             // label7
             // 
@@ -192,6 +195,7 @@
             this.precioNormal.Name = "precioNormal";
             this.precioNormal.Size = new System.Drawing.Size(76, 20);
             this.precioNormal.TabIndex = 15;
+            this.precioNormal.Text = "$ 0.00";
             // 
             // precioSabor
             // 
@@ -199,6 +203,7 @@
             this.precioSabor.Name = "precioSabor";
             this.precioSabor.Size = new System.Drawing.Size(74, 20);
             this.precioSabor.TabIndex = 16;
+            this.precioSabor.Text = "$ 0.00";
             // 
             // label8
             // 
@@ -225,7 +230,7 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Total : ";
             // 
-            // xButton1
+            // addVenta
             // 
             office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
             office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
@@ -244,21 +249,22 @@
             office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Red1.TextColor = System.Drawing.Color.White;
-            this.xButton1.ColorTable = office2010Red1;
-            this.xButton1.Location = new System.Drawing.Point(213, 280);
-            this.xButton1.Name = "xButton1";
-            this.xButton1.Size = new System.Drawing.Size(89, 18);
-            this.xButton1.TabIndex = 20;
-            this.xButton1.Text = "Agregar Venta";
-            this.xButton1.Theme = ManiXButton.Theme.MSOffice2010_RED;
-            this.xButton1.UseVisualStyleBackColor = true;
+            this.addVenta.ColorTable = office2010Red1;
+            this.addVenta.Location = new System.Drawing.Point(213, 280);
+            this.addVenta.Name = "addVenta";
+            this.addVenta.Size = new System.Drawing.Size(89, 18);
+            this.addVenta.TabIndex = 20;
+            this.addVenta.Text = "Agregar Venta";
+            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_RED;
+            this.addVenta.UseVisualStyleBackColor = true;
+            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
             // 
             // AddVentaModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 311);
-            this.Controls.Add(this.xButton1);
+            this.Controls.Add(this.addVenta);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Total);
             this.Controls.Add(this.label8);
@@ -279,7 +285,7 @@
             this.Controls.Add(this.conceptoCombo);
             this.Controls.Add(this.Logo);
             this.Name = "AddVentaModule";
-            this.Text = "Agregar Vneta";
+            this.Text = "Agregar Venta";
             ((System.ComponentModel.ISupportInitialize)(this.colorNaranja)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
@@ -307,6 +313,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Total;
         private System.Windows.Forms.Label label9;
-        private ManiXButton.XButton xButton1;
+        private ManiXButton.XButton addVenta;
     }
 }

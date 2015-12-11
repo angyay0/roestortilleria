@@ -19,3 +19,7 @@ C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj
 C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.MainModule.resources
 C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.csproj.GenerateResource.Cache
 C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.AddVentaModule.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.AddProduccionModule.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.AddInventarioModule.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.AddGastoModule.resources
+C:\Users\Georgepc\Documents\Visual Studio 2015\Projects\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.AddClienteModule.resources
