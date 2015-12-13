@@ -922,6 +922,14 @@
 
         #endregion
 
+        #region Produccion Diaria
+        
+
+
+        #endregion
+
+        #region items
+
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabCorte;
         private System.Windows.Forms.TabPage tabVenta;
@@ -984,5 +992,10 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
+
+        private float kgProduction;
+        private float kgFinalProd;
+
+        #endregion
     }
 }

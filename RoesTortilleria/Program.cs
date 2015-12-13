@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RoesTortilleria.views;
+using RoesTortilleria.test;
 
 namespace RoesTortilleria
 {
@@ -17,6 +18,20 @@ namespace RoesTortilleria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //
+            ProductionTest pt = new ProductionTest();
+            //Produccion del 11 de Noviembre. Resultado 290kg
+            //Datos del dia anterior. Prod 1100 kg Tortilla
+            //Datos del dia anterior. 20 Kg Sobrante
+            //
+            //Resultado 290kg
+            pt.assertUnitPreFinal(20,0,15,290);
+            //
+            //Resultado de la produccion final de tortilla del dia
+            //Resultado 261.73
+            pt.assertUnitFinal(11.1f, 8.9f, 8.27f, 261.73f);
+
             Application.Run(new LoginModule());
         }
     }
