@@ -18,7 +18,7 @@ namespace RoesTortilleria
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
+            /*
             //
             ProductionTest pt = new ProductionTest();
             //Produccion del 11 de Noviembre. Resultado 290kg
@@ -31,7 +31,13 @@ namespace RoesTortilleria
             //Resultado de la produccion final de tortilla del dia
             //Resultado 261.73
             pt.assertUnitFinal(11.1f, 8.9f, 8.27f, 261.73f);
+                        */
 
+            /*Prueba de Inventario
+            InventoryTest it = new InventoryTest();
+            it.assertUnitAdd(10, 10, 1000, 1000, new float[] { 10, 10, 1000, 1000 });
+            it.assertUnitSubtract(1, 1, 100, 100, new float[] { -1, -1, -100, -100 });
+            */
             Application.Run(new LoginModule());
         }
     }

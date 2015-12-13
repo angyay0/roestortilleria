@@ -46,13 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controllers\Inventory.cs" />
     <Compile Include="controllers\Production.cs" />
+    <Compile Include="controllers\Spending.cs" />
     <Compile Include="ROESDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ROESDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="test\InventoryTest.cs" />
     <Compile Include="test\ProductionTest.cs" />
+    <Compile Include="test\SpendingTest.cs" />
     <Compile Include="views\AddClienteModule.cs">
       <SubType>Form</SubType>
     </Compile>

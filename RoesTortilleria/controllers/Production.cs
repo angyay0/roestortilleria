@@ -22,6 +22,16 @@ namespace RoesTortilleria.controllers
             kgProduction = 0;
         }
 
+        public void saveProduction()
+        {
+
+        }
+
+        public void saveFinalizedProduction()
+        {
+
+        }
+
         #region Produccion Diaria
         public void makeDailyProduction(int sacoMaseca, int sacoMinsa, float kgMasaExtra)
         {
