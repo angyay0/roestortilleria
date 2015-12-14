@@ -47,6 +47,6 @@ namespace RoesTortilleria.views
             AddClienteModule addcliente = new AddClienteModule();
             addcliente.ShowDialog();
         }
-        
+
     }
 }

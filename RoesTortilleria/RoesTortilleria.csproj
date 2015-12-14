@@ -49,6 +49,10 @@
     <Compile Include="controllers\Inventory.cs" />
     <Compile Include="controllers\Production.cs" />
     <Compile Include="controllers\Spending.cs" />
+    <Compile Include="models\Cuota.cs" />
+    <Compile Include="models\Customer.cs" />
+    <Compile Include="models\Sale.cs" />
+    <Compile Include="models\Spend.cs" />
     <Compile Include="ROESDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

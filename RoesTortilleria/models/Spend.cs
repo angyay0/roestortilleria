@@ -10,7 +10,7 @@ namespace RoesTortilleria.models
     {
         public String concepto;
         public int cantidad;
-        public double total;
+        public double precio;
         public int almacen;
         public DateTime fecha;
     }
