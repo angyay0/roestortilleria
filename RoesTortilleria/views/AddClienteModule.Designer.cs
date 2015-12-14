@@ -168,6 +168,7 @@
             this.addcliente.Text = "Agregar ";
             this.addcliente.Theme = ManiXButton.Theme.MSOffice2010_RED;
             this.addcliente.UseVisualStyleBackColor = true;
+            this.addcliente.Click += new System.EventHandler(this.addcliente_Click);
             // 
             // AddClienteModule
             // 

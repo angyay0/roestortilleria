@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Data;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace RoesTortilleria
@@ -7,8 +9,16 @@ namespace RoesTortilleria
     {
         int toritllaNormal;
         int tortillaSabor;
+        int totalTortilla;
+        int normal;
+        int sabor;
+        int totalTnormal;
+        int totalTsabor;
         int kilostotal;
+        int idCuota;
+        int idCliente;
         String getCombo = "";
+        String concepto = "";
         public AddVentaModule()
         {
             InitializeComponent();
@@ -27,6 +37,7 @@ namespace RoesTortilleria
         {
             
             Object selectedItem = conceptoCombo.SelectedItem;
+            
             getCombo = selectedItem.ToString();
 
             /*if(getCombo == "Cliente")
@@ -38,6 +49,17 @@ namespace RoesTortilleria
             }*/
             if(getCombo == "Mostrador")
             {
+                DataTable dt = Datos.BuscarConcepto(getCombo);
+                if (dt.Rows.Count > 0)
+                {
+                    DataRow row = dt.Rows[0];
+                    //guardo datos en variables
+                    normal = Convert.ToInt32(row["Normal"]);
+                    sabor = Convert.ToInt32(row["sabor"]);
+                    concepto = Convert.ToString(row["Tipo"]);
+                    idCuota = Convert.ToInt32(row["idCuota"]);
+                    idCliente = 0;
+                }
                 clientesCombo.Enabled = false;
                 cuotaCombo.Enabled = false;
                 kilosNormal.Enabled = true;
@@ -57,42 +79,49 @@ namespace RoesTortilleria
 
         private void kilosNormal_TextChanged(object sender, EventArgs e)
         {
-            if(kilosNormal.Text != null)
+            if(string.IsNullOrEmpty(kilosNormal.Text))
             {
-                addVenta.Enabled = true;
+                addVenta.Enabled = false;
+            }
+            else
+            {
+                toritllaNormal = Convert.ToInt32(kilosNormal.Text);
+                totalTnormal = Datos.multiplica(toritllaNormal, normal);
+                precioNormal.Text= "$ " + totalTnormal + ".00";
             }
         }
 
         private void kilosSabor_TextChanged(object sender, EventArgs e)
         {
-            if (kilosSabor.Text != null)
+            if (string.IsNullOrEmpty(kilosSabor.Text))
             {
+                addVenta.Enabled = false;
+
+            }
+            else
+            {
+                tortillaSabor = Convert.ToInt32(kilosSabor.Text);
+                totalTsabor = Datos.multiplica(tortillaSabor, sabor);
+                precioSabor.Text = "$ " + totalTsabor + ".00";
+                kilostotal = totalTnormal + totalTsabor;
+                totalTortilla = toritllaNormal + tortillaSabor;
+                Total.Text = "$ " + kilostotal + ".00";
                 addVenta.Enabled = true;
             }
         }
 
         private void addVenta_Click(object sender, EventArgs e)
         {
-
             DateTime localDate = DateTime.Now;
-            if (kilosNormal.Text == null)
+            if (Datos.addVenta(idCliente,idCuota,concepto,totalTortilla,tortillaSabor,toritllaNormal, kilostotal, localDate))
             {
-                toritllaNormal = 0 ;
+                MessageBox.Show(localDate + "\n" + "Tortilla Normal: $" + totalTnormal + ".00" + "\n" + "Tortilla de Sabor: $" + totalTsabor + ".00" + "\n" + "Total: $" + kilostotal + ".00");
             }
             else
             {
-                toritllaNormal = Convert.ToInt32(kilosNormal.Text);
+                MessageBox.Show("No se pudo agregar");
             }
-            if(kilosSabor.Text == null)
-            {
-                tortillaSabor = 0;
-            }
-            else
-            {
-                tortillaSabor = Convert.ToInt32(kilosSabor.Text);
-            }
-            kilostotal = toritllaNormal + tortillaSabor;
-            MessageBox.Show( localDate + "\n" + "Tortilla Normal: " + toritllaNormal + "\n"+"Tortilla de Sabor: "+tortillaSabor+ "\n" +"Kilos totales: " +kilostotal);
+            
         }
     }
 }

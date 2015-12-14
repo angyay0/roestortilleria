@@ -170,7 +170,6 @@
             this.kilosNormal.Name = "kilosNormal";
             this.kilosNormal.Size = new System.Drawing.Size(48, 20);
             this.kilosNormal.TabIndex = 12;
-            this.kilosNormal.Text = "00";
             this.kilosNormal.TextChanged += new System.EventHandler(this.kilosNormal_TextChanged);
             // 
             // kilosSabor
@@ -179,7 +178,6 @@
             this.kilosSabor.Name = "kilosSabor";
             this.kilosSabor.Size = new System.Drawing.Size(48, 20);
             this.kilosSabor.TabIndex = 13;
-            this.kilosSabor.Text = "00";
             this.kilosSabor.TextChanged += new System.EventHandler(this.kilosSabor_TextChanged);
             // 
             // label7
