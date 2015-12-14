@@ -162,6 +162,7 @@
             this.addBtn.Text = "Agregar";
             this.addBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
             this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // label4
             // 

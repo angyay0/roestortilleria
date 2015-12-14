@@ -1022,7 +1022,6 @@ namespace RoesTortilleria.views
             this.tableGastos.Controls.Add(this.label36, 1, 0);
             this.tableGastos.Controls.Add(this.label37, 2, 0);
             this.tableGastos.Controls.Add(this.label38, 3, 0);
-            this.tableGastos.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableGastos.Location = new System.Drawing.Point(77, 158);
             this.tableGastos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableGastos.MaximumSize = new System.Drawing.Size(796, 910);
@@ -1030,7 +1029,6 @@ namespace RoesTortilleria.views
             this.tableGastos.Name = "tableGastos";
             this.tableGastos.RowCount = 1;
             this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableGastos.Size = new System.Drawing.Size(796, 300);
             this.tableGastos.TabIndex = 1;
             // 
@@ -1288,11 +1286,10 @@ namespace RoesTortilleria.views
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            setGastosData();
         }
 
         #endregion
-
+        /*
         public void setAlmacenData()
         {
             SqlConnection conexion = Conexion.getConexion();
@@ -1325,7 +1322,7 @@ namespace RoesTortilleria.views
             DateTime date = DateTime.Now;
             string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
             
-            Console.WriteLine(fecha);
+         //   Console.WriteLine(fecha);
             conexion.Open();
             string query = "SELECT * FROM Produccion WHERE fecha like '"+fecha+"'";
             SqlCommand command = new SqlCommand(query, conexion);
@@ -1363,19 +1360,41 @@ namespace RoesTortilleria.views
 
         public void setGastosData()
         {
-            for (int i = 0; i < 10; i++)
+
+            SqlConnection conexion = Conexion.getConexion();
+            DateTime date = DateTime.Now;
+            string fecha = date.ToString("yyyy-MM", CultureInfo.InvariantCulture);
+
+            Console.WriteLine(fecha);
+            conexion.Open();
+            string query = "SELECT * FROM Gastos WHERE fecha like '" + fecha + "%'";
+            SqlCommand command = new SqlCommand(query, conexion);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while( reader.Read() )
             {
-                // For Add New Row (Loop this code for add multiple rows)
-                this.tableGastos.RowCount = this.tableGastos.RowCount + 1;
-                this.tableGastos.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-                this.tableGastos.Controls.Add(new Label() { Text = "Street, City, State" }, 0, this.tableGastos.RowCount - 1);
-                this.tableGastos.Controls.Add(new Label() { Text = "888888888888" }, 1, this.tableGastos.RowCount - 1);
-                this.tableGastos.Controls.Add(new Label() { Text = "xxxxxxx@gmail.com" }, 2, this.tableGastos.RowCount - 1);
-                this.tableGastos.Controls.Add(new Label() { Text = "xxxxxxx@gmail.com" }, 3, this.tableGastos.RowCount - 1);
-
+                try
+                {
+                    // For Add New Row (Loop this code for add multiple rows)
+                    if (reader.GetString(4) != "Si")
+                    {
+                        this.tableGastos.RowCount = this.tableGastos.RowCount + 1;
+                        this.tableGastos.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+                        this.tableGastos.Controls.Add(new Label() { Text = reader.GetString(1) }, 0, this.tableGastos.RowCount - 1);
+                        this.tableGastos.Controls.Add(new Label() { Text = Convert.ToString(reader.GetInt32(2)) }, 1, this.tableGastos.RowCount - 1);
+                        this.tableGastos.Controls.Add(new Label() { Text = Convert.ToString(reader.GetInt32(3)) }, 2, this.tableGastos.RowCount - 1);
+                        this.tableGastos.Controls.Add(new Label() { Text = reader.GetDateTime(5).ToString() }, 3, this.tableGastos.RowCount - 1);
+                    }
+                }
+                catch (Exception e)
+                {
+                }
             }
+           
+            conexion.Close();
+            
         }
-
+        */
         #region items
 
         private System.Windows.Forms.TabControl tabControl;
