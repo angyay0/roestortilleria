@@ -19,6 +19,7 @@ namespace RoesTortilleria.views
             InitializeComponent();
 
             setGastosData();
+            setAlmacenData();
         }
 
         private void addVenta_Click(object sender, EventArgs e)
@@ -36,7 +37,7 @@ namespace RoesTortilleria.views
 
         private void addInventario_Click(object sender, EventArgs e)
         {
-            AddInventarioModule addinv = new AddInventarioModule();
+            AddInventarioModule addinv = new AddInventarioModule(Convert.ToInt32(this.lSacosInv.Text), Convert.ToInt32(this.lKGMInv.Text),this);
             addinv.ShowDialog();
         }
 
@@ -68,8 +69,8 @@ namespace RoesTortilleria.views
             {
                 try
                 {
-                    this.lSacosInv.Text = "" + (float)(double)reader.GetDouble(2) + " Sacos";
-                    this.lKGMInv.Text = "" + (float)(double)reader.GetDouble(3) + " KG";
+                    this.lSacosInv.Text = "" + (float)(double)reader.GetDouble(2);// + " Sacos";
+                    this.lKGMInv.Text = "" + (float)(double)reader.GetDouble(3);// + " KG";
                 }
                 catch (Exception e)
                 {

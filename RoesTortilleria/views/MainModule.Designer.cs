@@ -935,11 +935,11 @@ namespace RoesTortilleria.views
             // 
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(172, 13);
+            this.label33.Location = new System.Drawing.Point(145, 13);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(55, 17);
+            this.label33.Size = new System.Drawing.Size(108, 17);
             this.label33.TabIndex = 0;
-            this.label33.Text = "SACOS";
+            this.label33.Text = "SACOS Maseca";
             // 
             // label34
             // 
@@ -1028,7 +1028,7 @@ namespace RoesTortilleria.views
             this.tableGastos.MinimumSize = new System.Drawing.Size(796, 91);
             this.tableGastos.Name = "tableGastos";
             this.tableGastos.RowCount = 1;
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 297F));
             this.tableGastos.Size = new System.Drawing.Size(796, 300);
             this.tableGastos.TabIndex = 1;
             // 
@@ -1036,7 +1036,7 @@ namespace RoesTortilleria.views
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(101, 141);
+            this.label35.Location = new System.Drawing.Point(101, 143);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(85, 17);
             this.label35.TabIndex = 0;
@@ -1047,7 +1047,7 @@ namespace RoesTortilleria.views
             this.label36.AllowDrop = true;
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(309, 141);
+            this.label36.Location = new System.Drawing.Point(309, 143);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(77, 17);
             this.label36.TabIndex = 1;
@@ -1057,7 +1057,7 @@ namespace RoesTortilleria.views
             // 
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(471, 141);
+            this.label37.Location = new System.Drawing.Point(471, 143);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(54, 17);
             this.label37.TabIndex = 2;
@@ -1067,7 +1067,7 @@ namespace RoesTortilleria.views
             // 
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(664, 141);
+            this.label38.Location = new System.Drawing.Point(664, 143);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(53, 17);
             this.label38.TabIndex = 3;
