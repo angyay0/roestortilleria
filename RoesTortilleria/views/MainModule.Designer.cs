@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            ManiXButton.Office2010Yellow office2010Yellow7 = new ManiXButton.Office2010Yellow();
+            ManiXButton.Office2010Red office2010Red7 = new ManiXButton.Office2010Red();
+            ManiXButton.Office2010Green office2010Green7 = new ManiXButton.Office2010Green();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainModule));
-            ManiXButton.Office2010Green office2010Green1 = new ManiXButton.Office2010Green();
-            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
-            ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.addVenta = new ManiXButton.XButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.datePickerVenta = new System.Windows.Forms.DateTimePicker();
@@ -66,24 +67,41 @@
             this.tabCorte = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.tabProduc = new System.Windows.Forms.TabPage();
+            this.addProduccion = new ManiXButton.XButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.datePickerProd = new System.Windows.Forms.DateTimePicker();
             this.tableProd = new System.Windows.Forms.TableLayoutPanel();
+            this.detalleBtn = new ManiXButton.XButton();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.finalizarBtn = new ManiXButton.XButton();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.lSacoMaseca = new System.Windows.Forms.Label();
+            this.lKiloMas = new System.Windows.Forms.Label();
+            this.lKiloMinsa = new System.Windows.Forms.Label();
+            this.lKGHarina = new System.Windows.Forms.Label();
+            this.lTortilla = new System.Windows.Forms.Label();
+            this.lKGSobra = new System.Windows.Forms.Label();
+            this.lFTortilla = new System.Windows.Forms.Label();
             this.tabAlmacen = new System.Windows.Forms.TabPage();
+            this.addInventario = new ManiXButton.XButton();
             this.label8 = new System.Windows.Forms.Label();
             this.tableInventario = new System.Windows.Forms.TableLayoutPanel();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.lSacosInv = new System.Windows.Forms.Label();
+            this.lKGMInv = new System.Windows.Forms.Label();
             this.tabGastos = new System.Windows.Forms.TabPage();
+            this.addGasto = new ManiXButton.XButton();
             this.label9 = new System.Windows.Forms.Label();
             this.tableGastos = new System.Windows.Forms.TableLayoutPanel();
             this.tabClientes = new System.Windows.Forms.TabPage();
+            this.addCliente = new ManiXButton.XButton();
             this.tableCliente = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -96,24 +114,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.addVenta = new ManiXButton.XButton();
-            this.addProduccion = new ManiXButton.XButton();
-            this.detalleBtn = new ManiXButton.XButton();
-            this.finalizarBtn = new ManiXButton.XButton();
-            this.addInventario = new ManiXButton.XButton();
-            this.addGasto = new ManiXButton.XButton();
-            this.addCliente = new ManiXButton.XButton();
-            this.lSacoMaseca = new System.Windows.Forms.Label();
-            this.lKiloMas = new System.Windows.Forms.Label();
-            this.lKiloMinsa = new System.Windows.Forms.Label();
-            this.lKGHarina = new System.Windows.Forms.Label();
-            this.lTortilla = new System.Windows.Forms.Label();
-            this.lKGSobra = new System.Windows.Forms.Label();
-            this.lFTortilla = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.lSacosInv = new System.Windows.Forms.Label();
-            this.lKGMInv = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tableVenta.SuspendLayout();
@@ -123,6 +127,7 @@
             this.tabAlmacen.SuspendLayout();
             this.tableInventario.SuspendLayout();
             this.tabGastos.SuspendLayout();
+            this.tableGastos.SuspendLayout();
             this.tabClientes.SuspendLayout();
             this.tableCliente.SuspendLayout();
             this.tabFactNot.SuspendLayout();
@@ -160,6 +165,19 @@
             this.tabVenta.Size = new System.Drawing.Size(953, 505);
             this.tabVenta.TabIndex = 2;
             this.tabVenta.Text = "Ventas";
+            // 
+            // addVenta
+            // 
+            this.addVenta.ColorTable = office2010Green7;
+            this.addVenta.Location = new System.Drawing.Point(835, 159);
+            this.addVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.addVenta.Name = "addVenta";
+            this.addVenta.Size = new System.Drawing.Size(104, 48);
+            this.addVenta.TabIndex = 4;
+            this.addVenta.Text = "Agregar Venta";
+            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addVenta.UseVisualStyleBackColor = true;
+            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
             // 
             // label4
             // 
@@ -551,6 +569,19 @@
             this.tabProduc.TabIndex = 4;
             this.tabProduc.Text = "Producción del Día";
             // 
+            // addProduccion
+            // 
+            this.addProduccion.ColorTable = office2010Green1;
+            this.addProduccion.Location = new System.Drawing.Point(755, 133);
+            this.addProduccion.Margin = new System.Windows.Forms.Padding(4);
+            this.addProduccion.Name = "addProduccion";
+            this.addProduccion.Size = new System.Drawing.Size(160, 30);
+            this.addProduccion.TabIndex = 7;
+            this.addProduccion.Text = "Agregar Producción";
+            this.addProduccion.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addProduccion.UseVisualStyleBackColor = true;
+            this.addProduccion.Click += new System.EventHandler(this.addProduccion_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -617,6 +648,35 @@
             this.tableProd.Size = new System.Drawing.Size(886, 142);
             this.tableProd.TabIndex = 3;
             // 
+            // detalleBtn
+            // 
+            office2010Yellow7.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow7.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow7.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow7.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow7.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow7.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow7.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow7.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow7.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow7.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow7.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow7.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow7.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow7.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow7.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow7.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow7.TextColor = System.Drawing.Color.White;
+            this.detalleBtn.ColorTable = office2010Yellow7;
+            this.detalleBtn.Location = new System.Drawing.Point(777, 7);
+            this.detalleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.detalleBtn.Name = "detalleBtn";
+            this.detalleBtn.Size = new System.Drawing.Size(102, 30);
+            this.detalleBtn.TabIndex = 8;
+            this.detalleBtn.Text = "Ver Detalle";
+            this.detalleBtn.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
+            this.detalleBtn.UseVisualStyleBackColor = true;
+            // 
             // label26
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -636,6 +696,36 @@
             this.label27.Size = new System.Drawing.Size(48, 17);
             this.label27.TabIndex = 1;
             this.label27.Text = "KILOS";
+            // 
+            // finalizarBtn
+            // 
+            this.finalizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            office2010Red7.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Red7.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Red7.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red7.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red7.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Red7.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Red7.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red7.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red7.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red7.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red7.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red7.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red7.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Red7.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Red7.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red7.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red7.TextColor = System.Drawing.Color.White;
+            this.finalizarBtn.ColorTable = office2010Red7;
+            this.finalizarBtn.Location = new System.Drawing.Point(777, 76);
+            this.finalizarBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.finalizarBtn.Name = "finalizarBtn";
+            this.finalizarBtn.Size = new System.Drawing.Size(102, 30);
+            this.finalizarBtn.TabIndex = 8;
+            this.finalizarBtn.Text = "Finalizar";
+            this.finalizarBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
+            this.finalizarBtn.UseVisualStyleBackColor = true;
             // 
             // label28
             // 
@@ -687,6 +777,76 @@
             this.label32.TabIndex = 6;
             this.label32.Text = "VENTA";
             // 
+            // lSacoMaseca
+            // 
+            this.lSacoMaseca.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lSacoMaseca.AutoSize = true;
+            this.lSacoMaseca.Location = new System.Drawing.Point(26, 74);
+            this.lSacoMaseca.Name = "lSacoMaseca";
+            this.lSacoMaseca.Size = new System.Drawing.Size(61, 34);
+            this.lSacoMaseca.TabIndex = 9;
+            this.lSacoMaseca.Text = "No Hay Registro";
+            // 
+            // lKiloMas
+            // 
+            this.lKiloMas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lKiloMas.AutoSize = true;
+            this.lKiloMas.Location = new System.Drawing.Point(136, 74);
+            this.lKiloMas.Name = "lKiloMas";
+            this.lKiloMas.Size = new System.Drawing.Size(61, 34);
+            this.lKiloMas.TabIndex = 10;
+            this.lKiloMas.Text = "No Hay Registro";
+            // 
+            // lKiloMinsa
+            // 
+            this.lKiloMinsa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lKiloMinsa.AutoSize = true;
+            this.lKiloMinsa.Location = new System.Drawing.Point(246, 74);
+            this.lKiloMinsa.Name = "lKiloMinsa";
+            this.lKiloMinsa.Size = new System.Drawing.Size(61, 34);
+            this.lKiloMinsa.TabIndex = 11;
+            this.lKiloMinsa.Text = "No Hay Registro";
+            // 
+            // lKGHarina
+            // 
+            this.lKGHarina.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lKGHarina.AutoSize = true;
+            this.lKGHarina.Location = new System.Drawing.Point(356, 74);
+            this.lKGHarina.Name = "lKGHarina";
+            this.lKGHarina.Size = new System.Drawing.Size(61, 34);
+            this.lKGHarina.TabIndex = 12;
+            this.lKGHarina.Text = "No Hay Registro";
+            // 
+            // lTortilla
+            // 
+            this.lTortilla.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lTortilla.AutoSize = true;
+            this.lTortilla.Location = new System.Drawing.Point(466, 74);
+            this.lTortilla.Name = "lTortilla";
+            this.lTortilla.Size = new System.Drawing.Size(61, 34);
+            this.lTortilla.TabIndex = 13;
+            this.lTortilla.Text = "No Hay Registro";
+            // 
+            // lKGSobra
+            // 
+            this.lKGSobra.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lKGSobra.AutoSize = true;
+            this.lKGSobra.Location = new System.Drawing.Point(576, 74);
+            this.lKGSobra.Name = "lKGSobra";
+            this.lKGSobra.Size = new System.Drawing.Size(61, 34);
+            this.lKGSobra.TabIndex = 14;
+            this.lKGSobra.Text = "No Hay Registro";
+            // 
+            // lFTortilla
+            // 
+            this.lFTortilla.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lFTortilla.AutoSize = true;
+            this.lFTortilla.Location = new System.Drawing.Point(686, 74);
+            this.lFTortilla.Name = "lFTortilla";
+            this.lFTortilla.Size = new System.Drawing.Size(61, 34);
+            this.lFTortilla.TabIndex = 15;
+            this.lFTortilla.Text = "No Hay Registro";
+            // 
             // tabAlmacen
             // 
             this.tabAlmacen.BackColor = System.Drawing.SystemColors.Control;
@@ -700,6 +860,36 @@
             this.tabAlmacen.Size = new System.Drawing.Size(953, 505);
             this.tabAlmacen.TabIndex = 3;
             this.tabAlmacen.Text = "Almacen";
+            // 
+            // addInventario
+            // 
+            office2010Green7.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Green7.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Green7.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green7.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green7.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Green7.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Green7.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green7.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green7.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green7.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green7.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green7.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green7.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Green7.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Green7.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green7.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green7.TextColor = System.Drawing.Color.White;
+            this.addInventario.ColorTable = office2010Green7;
+            this.addInventario.Location = new System.Drawing.Point(726, 323);
+            this.addInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.addInventario.Name = "addInventario";
+            this.addInventario.Size = new System.Drawing.Size(149, 53);
+            this.addInventario.TabIndex = 9;
+            this.addInventario.Text = "Agregar a Inventario";
+            this.addInventario.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addInventario.UseVisualStyleBackColor = true;
+            this.addInventario.Click += new System.EventHandler(this.addInventario_Click);
             // 
             // label8
             // 
@@ -736,6 +926,46 @@
             this.tableInventario.Size = new System.Drawing.Size(796, 142);
             this.tableInventario.TabIndex = 7;
             // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(172, 13);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(55, 17);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "SACOS";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(559, 13);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(74, 17);
+            this.label34.TabIndex = 1;
+            this.label34.Text = "KG MINSA";
+            // 
+            // lSacosInv
+            // 
+            this.lSacosInv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lSacosInv.AutoSize = true;
+            this.lSacosInv.Location = new System.Drawing.Point(170, 83);
+            this.lSacosInv.Name = "lSacosInv";
+            this.lSacosInv.Size = new System.Drawing.Size(59, 17);
+            this.lSacosInv.TabIndex = 2;
+            this.lSacosInv.Text = "0 Sacos";
+            // 
+            // lKGMInv
+            // 
+            this.lKGMInv.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lKGMInv.AutoSize = true;
+            this.lKGMInv.Location = new System.Drawing.Point(576, 83);
+            this.lKGMInv.Name = "lKGMInv";
+            this.lKGMInv.Size = new System.Drawing.Size(40, 17);
+            this.lKGMInv.TabIndex = 3;
+            this.lKGMInv.Text = "0 KG";
+            // 
             // tabGastos
             // 
             this.tabGastos.BackColor = System.Drawing.SystemColors.Control;
@@ -750,6 +980,19 @@
             this.tabGastos.TabIndex = 5;
             this.tabGastos.Text = "Gastos";
             // 
+            // addGasto
+            // 
+            this.addGasto.ColorTable = office2010Green7;
+            this.addGasto.Location = new System.Drawing.Point(773, 110);
+            this.addGasto.Margin = new System.Windows.Forms.Padding(4);
+            this.addGasto.Name = "addGasto";
+            this.addGasto.Size = new System.Drawing.Size(100, 33);
+            this.addGasto.TabIndex = 8;
+            this.addGasto.Text = "Agregar Gasto";
+            this.addGasto.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addGasto.UseVisualStyleBackColor = true;
+            this.addGasto.Click += new System.EventHandler(this.addGasto_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -763,23 +1006,27 @@
             // 
             // tableGastos
             // 
+            this.tableGastos.AutoScroll = true;
             this.tableGastos.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableGastos.ColumnCount = 4;
-            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.05739F));
+            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.52706F));
+            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.35743F));
+            this.tableGastos.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.05812F));
+            this.tableGastos.Controls.Add(this.label35, 0, 0);
+            this.tableGastos.Controls.Add(this.label36, 1, 0);
+            this.tableGastos.Controls.Add(this.label37, 2, 0);
+            this.tableGastos.Controls.Add(this.label38, 3, 0);
             this.tableGastos.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tableGastos.Location = new System.Drawing.Point(77, 158);
             this.tableGastos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableGastos.MaximumSize = new System.Drawing.Size(796, 910);
+            this.tableGastos.MinimumSize = new System.Drawing.Size(796, 91);
             this.tableGastos.Name = "tableGastos";
-            this.tableGastos.RowCount = 5;
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableGastos.Size = new System.Drawing.Size(796, 286);
+            this.tableGastos.RowCount = 2;
+            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableGastos.Size = new System.Drawing.Size(796, 91);
             this.tableGastos.TabIndex = 1;
             // 
             // tabClientes
@@ -795,6 +1042,19 @@
             this.tabClientes.Size = new System.Drawing.Size(953, 505);
             this.tabClientes.TabIndex = 1;
             this.tabClientes.Text = "Clientes";
+            // 
+            // addCliente
+            // 
+            this.addCliente.ColorTable = office2010Green1;
+            this.addCliente.Location = new System.Drawing.Point(77, 123);
+            this.addCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.addCliente.Name = "addCliente";
+            this.addCliente.Size = new System.Drawing.Size(128, 28);
+            this.addCliente.TabIndex = 11;
+            this.addCliente.Text = "Agregar Cliente";
+            this.addCliente.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addCliente.UseVisualStyleBackColor = true;
+            this.addCliente.Click += new System.EventHandler(this.addCliente_Click);
             // 
             // tableCliente
             // 
@@ -940,256 +1200,46 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Jorge Armando Rojas Montero";
             // 
-            // addVenta
+            // label35
             // 
-            office2010Green1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Green1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Green1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Green1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Green1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Green1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Green1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green1.TextColor = System.Drawing.Color.White;
-            this.addVenta.ColorTable = office2010Green1;
-            this.addVenta.Location = new System.Drawing.Point(835, 159);
-            this.addVenta.Margin = new System.Windows.Forms.Padding(4);
-            this.addVenta.Name = "addVenta";
-            this.addVenta.Size = new System.Drawing.Size(104, 48);
-            this.addVenta.TabIndex = 4;
-            this.addVenta.Text = "Agregar Venta";
-            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addVenta.UseVisualStyleBackColor = true;
-            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(101, 9);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(85, 17);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "CONCEPTO";
             // 
-            // addProduccion
+            // label36
             // 
-            this.addProduccion.ColorTable = office2010Green1;
-            this.addProduccion.Location = new System.Drawing.Point(755, 133);
-            this.addProduccion.Margin = new System.Windows.Forms.Padding(4);
-            this.addProduccion.Name = "addProduccion";
-            this.addProduccion.Size = new System.Drawing.Size(160, 30);
-            this.addProduccion.TabIndex = 7;
-            this.addProduccion.Text = "Agregar Producción";
-            this.addProduccion.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addProduccion.UseVisualStyleBackColor = true;
-            this.addProduccion.Click += new System.EventHandler(this.addProduccion_Click);
+            this.label36.AllowDrop = true;
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(309, 9);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(77, 17);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "CANTIDAD";
             // 
-            // detalleBtn
+            // label37
             // 
-            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.TextColor = System.Drawing.Color.White;
-            this.detalleBtn.ColorTable = office2010Yellow1;
-            this.detalleBtn.Location = new System.Drawing.Point(777, 7);
-            this.detalleBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.detalleBtn.Name = "detalleBtn";
-            this.detalleBtn.Size = new System.Drawing.Size(102, 30);
-            this.detalleBtn.TabIndex = 8;
-            this.detalleBtn.Text = "Ver Detalle";
-            this.detalleBtn.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
-            this.detalleBtn.UseVisualStyleBackColor = true;
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(471, 9);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(54, 17);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "TOTAL";
             // 
-            // finalizarBtn
+            // label38
             // 
-            this.finalizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Red1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Red1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Red1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Red1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red1.TextColor = System.Drawing.Color.White;
-            this.finalizarBtn.ColorTable = office2010Red1;
-            this.finalizarBtn.Location = new System.Drawing.Point(777, 76);
-            this.finalizarBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.finalizarBtn.Name = "finalizarBtn";
-            this.finalizarBtn.Size = new System.Drawing.Size(102, 30);
-            this.finalizarBtn.TabIndex = 8;
-            this.finalizarBtn.Text = "Finalizar";
-            this.finalizarBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
-            this.finalizarBtn.UseVisualStyleBackColor = true;
-            // 
-            // addInventario
-            // 
-            this.addInventario.ColorTable = office2010Green1;
-            this.addInventario.Location = new System.Drawing.Point(775, 338);
-            this.addInventario.Margin = new System.Windows.Forms.Padding(4);
-            this.addInventario.Name = "addInventario";
-            this.addInventario.Size = new System.Drawing.Size(100, 38);
-            this.addInventario.TabIndex = 9;
-            this.addInventario.Text = "Agregar a Inventario";
-            this.addInventario.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addInventario.UseVisualStyleBackColor = true;
-            this.addInventario.Click += new System.EventHandler(this.addInventario_Click);
-            // 
-            // addGasto
-            // 
-            this.addGasto.ColorTable = office2010Green1;
-            this.addGasto.Location = new System.Drawing.Point(773, 463);
-            this.addGasto.Margin = new System.Windows.Forms.Padding(4);
-            this.addGasto.Name = "addGasto";
-            this.addGasto.Size = new System.Drawing.Size(100, 33);
-            this.addGasto.TabIndex = 8;
-            this.addGasto.Text = "Agregar Gasto";
-            this.addGasto.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addGasto.UseVisualStyleBackColor = true;
-            this.addGasto.Click += new System.EventHandler(this.addGasto_Click);
-            // 
-            // addCliente
-            // 
-            this.addCliente.ColorTable = office2010Green1;
-            this.addCliente.Location = new System.Drawing.Point(77, 123);
-            this.addCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.addCliente.Name = "addCliente";
-            this.addCliente.Size = new System.Drawing.Size(128, 28);
-            this.addCliente.TabIndex = 11;
-            this.addCliente.Text = "Agregar Cliente";
-            this.addCliente.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addCliente.UseVisualStyleBackColor = true;
-            this.addCliente.Click += new System.EventHandler(this.addCliente_Click);
-            // 
-            // lSacoMaseca
-            // 
-            this.lSacoMaseca.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lSacoMaseca.AutoSize = true;
-            this.lSacoMaseca.Location = new System.Drawing.Point(26, 74);
-            this.lSacoMaseca.Name = "lSacoMaseca";
-            this.lSacoMaseca.Size = new System.Drawing.Size(61, 34);
-            this.lSacoMaseca.TabIndex = 9;
-            this.lSacoMaseca.Text = "No Hay Registro";
-            // 
-            // lKiloMas
-            // 
-            this.lKiloMas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lKiloMas.AutoSize = true;
-            this.lKiloMas.Location = new System.Drawing.Point(136, 74);
-            this.lKiloMas.Name = "lKiloMas";
-            this.lKiloMas.Size = new System.Drawing.Size(61, 34);
-            this.lKiloMas.TabIndex = 10;
-            this.lKiloMas.Text = "No Hay Registro";
-            // 
-            // lKiloMinsa
-            // 
-            this.lKiloMinsa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lKiloMinsa.AutoSize = true;
-            this.lKiloMinsa.Location = new System.Drawing.Point(246, 74);
-            this.lKiloMinsa.Name = "lKiloMinsa";
-            this.lKiloMinsa.Size = new System.Drawing.Size(61, 34);
-            this.lKiloMinsa.TabIndex = 11;
-            this.lKiloMinsa.Text = "No Hay Registro";
-            // 
-            // lKGHarina
-            // 
-            this.lKGHarina.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lKGHarina.AutoSize = true;
-            this.lKGHarina.Location = new System.Drawing.Point(356, 74);
-            this.lKGHarina.Name = "lKGHarina";
-            this.lKGHarina.Size = new System.Drawing.Size(61, 34);
-            this.lKGHarina.TabIndex = 12;
-            this.lKGHarina.Text = "No Hay Registro";
-            // 
-            // lTortilla
-            // 
-            this.lTortilla.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lTortilla.AutoSize = true;
-            this.lTortilla.Location = new System.Drawing.Point(466, 74);
-            this.lTortilla.Name = "lTortilla";
-            this.lTortilla.Size = new System.Drawing.Size(61, 34);
-            this.lTortilla.TabIndex = 13;
-            this.lTortilla.Text = "No Hay Registro";
-            // 
-            // lKGSobra
-            // 
-            this.lKGSobra.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lKGSobra.AutoSize = true;
-            this.lKGSobra.Location = new System.Drawing.Point(576, 74);
-            this.lKGSobra.Name = "lKGSobra";
-            this.lKGSobra.Size = new System.Drawing.Size(61, 34);
-            this.lKGSobra.TabIndex = 14;
-            this.lKGSobra.Text = "No Hay Registro";
-            // 
-            // lFTortilla
-            // 
-            this.lFTortilla.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lFTortilla.AutoSize = true;
-            this.lFTortilla.Location = new System.Drawing.Point(686, 74);
-            this.lFTortilla.Name = "lFTortilla";
-            this.lFTortilla.Size = new System.Drawing.Size(61, 34);
-            this.lFTortilla.TabIndex = 15;
-            this.lFTortilla.Text = "No Hay Registro";
-            // 
-            // label33
-            // 
-            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(172, 13);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(55, 17);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "SACOS";
-            // 
-            // label34
-            // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(559, 13);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(74, 17);
-            this.label34.TabIndex = 1;
-            this.label34.Text = "KG MINSA";
-            // 
-            // lSacosInv
-            // 
-            this.lSacosInv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lSacosInv.AutoSize = true;
-            this.lSacosInv.Location = new System.Drawing.Point(170, 83);
-            this.lSacosInv.Name = "lSacosInv";
-            this.lSacosInv.Size = new System.Drawing.Size(59, 17);
-            this.lSacosInv.TabIndex = 2;
-            this.lSacosInv.Text = "0 Sacos";
-            // 
-            // lKGMInv
-            // 
-            this.lKGMInv.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lKGMInv.AutoSize = true;
-            this.lKGMInv.Location = new System.Drawing.Point(576, 83);
-            this.lKGMInv.Name = "lKGMInv";
-            this.lKGMInv.Size = new System.Drawing.Size(40, 17);
-            this.lKGMInv.TabIndex = 3;
-            this.lKGMInv.Text = "0 KG";
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(664, 9);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(53, 17);
+            this.label38.TabIndex = 3;
+            this.label38.Text = "FECHA";
             // 
             // MainModule
             // 
@@ -1221,6 +1271,8 @@
             this.tableInventario.PerformLayout();
             this.tabGastos.ResumeLayout(false);
             this.tabGastos.PerformLayout();
+            this.tableGastos.ResumeLayout(false);
+            this.tableGastos.PerformLayout();
             this.tabClientes.ResumeLayout(false);
             this.tabClientes.PerformLayout();
             this.tableCliente.ResumeLayout(false);
@@ -1328,5 +1380,9 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lSacosInv;
         private System.Windows.Forms.Label lKGMInv;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
     }
 }

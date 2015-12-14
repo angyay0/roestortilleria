@@ -37,9 +37,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.conceptoGasto = new System.Windows.Forms.TextBox();
-            this.coneptoGasto = new System.Windows.Forms.TextBox();
+            this.cantidadGasto = new System.Windows.Forms.TextBox();
             this.fechaGasto = new System.Windows.Forms.DateTimePicker();
-            this.addgasto = new ManiXButton.XButton();
+            this.addBtn = new ManiXButton.XButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.totalBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,20 +49,22 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-1, 87);
+            this.pictureBox2.Location = new System.Drawing.Point(-1, 107);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(290, 10);
+            this.pictureBox2.Size = new System.Drawing.Size(387, 12);
             this.pictureBox2.TabIndex = 26;
             this.pictureBox2.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poor Richard", 24F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.label1.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label1.Location = new System.Drawing.Point(8, 31);
+            this.label1.Location = new System.Drawing.Point(11, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 36);
+            this.label1.Size = new System.Drawing.Size(147, 46);
             this.label1.TabIndex = 28;
             this.label1.Text = "Gastos";
             // 
@@ -68,7 +72,8 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(172, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(229, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -78,52 +83,58 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(43, 215);
+            this.label5.Location = new System.Drawing.Point(57, 275);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.Size = new System.Drawing.Size(55, 17);
             this.label5.TabIndex = 34;
             this.label5.Text = "Fecha :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(43, 164);
+            this.label3.Location = new System.Drawing.Point(57, 172);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(72, 17);
             this.label3.TabIndex = 33;
             this.label3.Text = "Cantidad :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 108);
+            this.label2.Location = new System.Drawing.Point(57, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 32;
             this.label2.Text = "Concepto :";
             // 
             // conceptoGasto
             // 
-            this.conceptoGasto.Location = new System.Drawing.Point(46, 124);
+            this.conceptoGasto.Location = new System.Drawing.Point(61, 143);
+            this.conceptoGasto.Margin = new System.Windows.Forms.Padding(4);
             this.conceptoGasto.Name = "conceptoGasto";
-            this.conceptoGasto.Size = new System.Drawing.Size(100, 20);
+            this.conceptoGasto.Size = new System.Drawing.Size(132, 22);
             this.conceptoGasto.TabIndex = 35;
             // 
-            // coneptoGasto
+            // cantidadGasto
             // 
-            this.coneptoGasto.Location = new System.Drawing.Point(46, 180);
-            this.coneptoGasto.Name = "coneptoGasto";
-            this.coneptoGasto.Size = new System.Drawing.Size(100, 20);
-            this.coneptoGasto.TabIndex = 36;
+            this.cantidadGasto.Location = new System.Drawing.Point(61, 192);
+            this.cantidadGasto.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidadGasto.Name = "cantidadGasto";
+            this.cantidadGasto.Size = new System.Drawing.Size(132, 22);
+            this.cantidadGasto.TabIndex = 36;
             // 
             // fechaGasto
             // 
-            this.fechaGasto.Location = new System.Drawing.Point(46, 231);
+            this.fechaGasto.Location = new System.Drawing.Point(61, 294);
+            this.fechaGasto.Margin = new System.Windows.Forms.Padding(4);
             this.fechaGasto.Name = "fechaGasto";
-            this.fechaGasto.Size = new System.Drawing.Size(200, 20);
+            this.fechaGasto.Size = new System.Drawing.Size(265, 22);
             this.fechaGasto.TabIndex = 37;
             // 
-            // addgasto
+            // addBtn
             // 
             office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
             office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
@@ -142,23 +153,42 @@
             office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Red1.TextColor = System.Drawing.Color.White;
-            this.addgasto.ColorTable = office2010Red1;
-            this.addgasto.Location = new System.Drawing.Point(98, 269);
-            this.addgasto.Name = "addgasto";
-            this.addgasto.Size = new System.Drawing.Size(75, 23);
-            this.addgasto.TabIndex = 38;
-            this.addgasto.Text = "Agregar";
-            this.addgasto.Theme = ManiXButton.Theme.MSOffice2010_RED;
-            this.addgasto.UseVisualStyleBackColor = true;
+            this.addBtn.ColorTable = office2010Red1;
+            this.addBtn.Location = new System.Drawing.Point(131, 331);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(100, 28);
+            this.addBtn.TabIndex = 38;
+            this.addBtn.Text = "Agregar";
+            this.addBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
+            this.addBtn.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(61, 224);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Total:";
+            // 
+            // totalBox
+            // 
+            this.totalBox.Location = new System.Drawing.Point(60, 244);
+            this.totalBox.Name = "totalBox";
+            this.totalBox.Size = new System.Drawing.Size(133, 22);
+            this.totalBox.TabIndex = 40;
             // 
             // AddGastoModule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 304);
-            this.Controls.Add(this.addgasto);
+            this.ClientSize = new System.Drawing.Size(379, 374);
+            this.Controls.Add(this.totalBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.addBtn);
             this.Controls.Add(this.fechaGasto);
-            this.Controls.Add(this.coneptoGasto);
+            this.Controls.Add(this.cantidadGasto);
             this.Controls.Add(this.conceptoGasto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -166,6 +196,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddGastoModule";
             this.Text = "Agregar Gasto";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -184,8 +215,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox conceptoGasto;
-        private System.Windows.Forms.TextBox coneptoGasto;
+        private System.Windows.Forms.TextBox cantidadGasto;
         private System.Windows.Forms.DateTimePicker fechaGasto;
-        private ManiXButton.XButton addgasto;
+        private ManiXButton.XButton addBtn;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox totalBox;
     }
 }

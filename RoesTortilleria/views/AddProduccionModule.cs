@@ -15,22 +15,22 @@ namespace RoesTortilleria.views
         public AddProduccionModule()
         {
             InitializeComponent();
-            addProduccion.Enabled = false;
-            harinaMinUsada.Enabled = false;
+            addBtn.Enabled = false;
+            kgMinUsado.Enabled = false;
             masaExtra.Enabled = false;
         }
 
         private void harinaUsada_TextChanged(object sender, EventArgs e)
         {
-            if(harinaUsada.Text != null )
+            if(sacoUsado.Text != null )
             {
-                harinaMinUsada.Enabled = true;
+                kgMinUsado.Enabled = true;
             }
         }
 
         private void harinaMinUsada_TextChanged(object sender, EventArgs e)
         {
-            if (harinaMinUsada.Text != null )
+            if (kgMinUsado.Text != null )
             {
                 masaExtra.Enabled = true;
             }
@@ -41,7 +41,7 @@ namespace RoesTortilleria.views
         {
             if ( masaExtra.Text != null)
             {
-                addProduccion.Enabled = true;
+                addBtn.Enabled = true;
             }
         }
     }
