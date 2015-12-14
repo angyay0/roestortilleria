@@ -13,7 +13,7 @@ namespace RoesTortilleria
         {
             try
             {
-                SqlConnection cn = new SqlConnection("Data Source=george;Initial Catalog=RoesDB;Integrated Security=True");
+                SqlConnection cn = new SqlConnection("Data Source=ENKERUPC\\AIMOS;Initial Catalog=RoesDB;User ID=sa;Password=1234");
                // cn.Open();
                 return cn;
             }

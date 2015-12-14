@@ -32,5 +32,15 @@ namespace RoesTortilleria.Properties {
                 return ((string)(this["ROESdbCon"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ENKERUPC\\AIMOS;Initial Catalog=RoesDB;User ID=sa;Password=1234")]
+        public string RoesDBConAn {
+            get {
+                return ((string)(this["RoesDBConAn"]));
+            }
+        }
     }
 }

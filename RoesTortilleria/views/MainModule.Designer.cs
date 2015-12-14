@@ -1,4 +1,9 @@
-﻿namespace RoesTortilleria.views
+﻿using System;
+using System.Data.SqlClient;
+using System.Globalization;
+using System.Windows.Forms;
+
+namespace RoesTortilleria.views
 {
     partial class MainModule
     {
@@ -28,9 +33,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ManiXButton.Office2010Yellow office2010Yellow7 = new ManiXButton.Office2010Yellow();
-            ManiXButton.Office2010Red office2010Red7 = new ManiXButton.Office2010Red();
-            ManiXButton.Office2010Green office2010Green7 = new ManiXButton.Office2010Green();
+            ManiXButton.Office2010Green office2010Green1 = new ManiXButton.Office2010Green();
+            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
+            ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainModule));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
@@ -100,6 +105,10 @@
             this.addGasto = new ManiXButton.XButton();
             this.label9 = new System.Windows.Forms.Label();
             this.tableGastos = new System.Windows.Forms.TableLayoutPanel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabPage();
             this.addCliente = new ManiXButton.XButton();
             this.tableCliente = new System.Windows.Forms.TableLayoutPanel();
@@ -114,10 +123,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tableVenta.SuspendLayout();
@@ -168,7 +173,24 @@
             // 
             // addVenta
             // 
-            this.addVenta.ColorTable = office2010Green7;
+            office2010Green1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Green1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Green1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Green1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Green1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Green1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Green1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green1.TextColor = System.Drawing.Color.White;
+            this.addVenta.ColorTable = office2010Green1;
             this.addVenta.Location = new System.Drawing.Point(835, 159);
             this.addVenta.Margin = new System.Windows.Forms.Padding(4);
             this.addVenta.Name = "addVenta";
@@ -650,24 +672,24 @@
             // 
             // detalleBtn
             // 
-            office2010Yellow7.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow7.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow7.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow7.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow7.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow7.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow7.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow7.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow7.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow7.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow7.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow7.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow7.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow7.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow7.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow7.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow7.TextColor = System.Drawing.Color.White;
-            this.detalleBtn.ColorTable = office2010Yellow7;
+            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow1.TextColor = System.Drawing.Color.White;
+            this.detalleBtn.ColorTable = office2010Yellow1;
             this.detalleBtn.Location = new System.Drawing.Point(777, 7);
             this.detalleBtn.Margin = new System.Windows.Forms.Padding(4);
             this.detalleBtn.Name = "detalleBtn";
@@ -700,24 +722,24 @@
             // finalizarBtn
             // 
             this.finalizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            office2010Red7.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Red7.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Red7.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red7.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red7.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Red7.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Red7.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red7.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red7.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red7.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red7.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red7.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red7.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Red7.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Red7.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red7.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red7.TextColor = System.Drawing.Color.White;
-            this.finalizarBtn.ColorTable = office2010Red7;
+            office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Red1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Red1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Red1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Red1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.TextColor = System.Drawing.Color.White;
+            this.finalizarBtn.ColorTable = office2010Red1;
             this.finalizarBtn.Location = new System.Drawing.Point(777, 76);
             this.finalizarBtn.Margin = new System.Windows.Forms.Padding(4);
             this.finalizarBtn.Name = "finalizarBtn";
@@ -863,24 +885,7 @@
             // 
             // addInventario
             // 
-            office2010Green7.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Green7.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Green7.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green7.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green7.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Green7.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Green7.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green7.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green7.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green7.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green7.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green7.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green7.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Green7.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Green7.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green7.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green7.TextColor = System.Drawing.Color.White;
-            this.addInventario.ColorTable = office2010Green7;
+            this.addInventario.ColorTable = office2010Green1;
             this.addInventario.Location = new System.Drawing.Point(726, 323);
             this.addInventario.Margin = new System.Windows.Forms.Padding(4);
             this.addInventario.Name = "addInventario";
@@ -982,7 +987,7 @@
             // 
             // addGasto
             // 
-            this.addGasto.ColorTable = office2010Green7;
+            this.addGasto.ColorTable = office2010Green1;
             this.addGasto.Location = new System.Drawing.Point(773, 110);
             this.addGasto.Margin = new System.Windows.Forms.Padding(4);
             this.addGasto.Name = "addGasto";
@@ -1023,11 +1028,52 @@
             this.tableGastos.MaximumSize = new System.Drawing.Size(796, 910);
             this.tableGastos.MinimumSize = new System.Drawing.Size(796, 91);
             this.tableGastos.Name = "tableGastos";
-            this.tableGastos.RowCount = 2;
+            this.tableGastos.RowCount = 1;
             this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableGastos.Size = new System.Drawing.Size(796, 91);
+            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableGastos.Size = new System.Drawing.Size(796, 300);
             this.tableGastos.TabIndex = 1;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(101, 141);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(85, 17);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "CONCEPTO";
+            // 
+            // label36
+            // 
+            this.label36.AllowDrop = true;
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(309, 141);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(77, 17);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "CANTIDAD";
+            // 
+            // label37
+            // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(471, 141);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(54, 17);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "TOTAL";
+            // 
+            // label38
+            // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(664, 141);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(53, 17);
+            this.label38.TabIndex = 3;
+            this.label38.Text = "FECHA";
             // 
             // tabClientes
             // 
@@ -1200,47 +1246,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Jorge Armando Rojas Montero";
             // 
-            // label35
-            // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(101, 9);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(85, 17);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "CONCEPTO";
-            // 
-            // label36
-            // 
-            this.label36.AllowDrop = true;
-            this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(309, 9);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(77, 17);
-            this.label36.TabIndex = 1;
-            this.label36.Text = "CANTIDAD";
-            // 
-            // label37
-            // 
-            this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(471, 9);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(54, 17);
-            this.label37.TabIndex = 2;
-            this.label37.Text = "TOTAL";
-            // 
-            // label38
-            // 
-            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(664, 9);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(53, 17);
-            this.label38.TabIndex = 3;
-            this.label38.Text = "FECHA";
-            // 
             // MainModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1283,15 +1288,93 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+            setGastosData();
         }
 
         #endregion
 
-        #region Produccion Diaria
-        
+        public void setAlmacenData()
+        {
+            SqlConnection conexion = Conexion.getConexion();
+            DateTime date = DateTime.Now;
+            string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
 
+            conexion.Open();
+            string query = "SELECT * FROM Almacen";
+            SqlCommand command = new SqlCommand(query, conexion);
+            SqlDataReader reader = command.ExecuteReader();
 
-        #endregion
+            if( reader.Read())
+            {
+                try
+                {
+                    this.lSacosInv.Text = "" +(float)(double) reader.GetDouble(2) + " Sacos";
+                    this.lKGMInv.Text = "" + (float)(double) reader.GetDouble(3) + " KG";
+                }
+                catch (Exception e) {
+                }
+            }
+            conexion.Close();
+
+            
+        }
+
+        public void setProduccionData()
+        {
+            SqlConnection conexion = Conexion.getConexion();
+            DateTime date = DateTime.Now;
+            string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            
+            Console.WriteLine(fecha);
+            conexion.Open();
+            string query = "SELECT * FROM Produccion WHERE fecha like '"+fecha+"'";
+            SqlCommand command = new SqlCommand(query, conexion);
+            SqlDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                try
+                {
+                    this.lSacoMaseca.Text = "" + (float)(double)reader.GetDouble(1) + " Sacos";
+                    this.lKiloMinsa.Text = "" + (float)(double)reader.GetDouble(2) + " Kg";
+                    this.lKiloMas.Text = "" + (float)(double)reader.GetDouble(3) + " Kg";
+                    this.lKGHarina.Text = "" + (float)(double)reader.GetDouble(4) + " Kg";
+                    this.lTortilla.Text = "" + (float)(double)reader.GetDouble(5) + " Kg";
+                    this.lKGSobra.Text = "" + (float)(double)reader.GetDouble(7) + " Kg";
+                    this.lFTortilla.Text = "" + (float)(double)reader.GetDouble(9) + " Kg";
+
+                    if ((float)(double)reader.GetDouble(6) != 0) {
+                        this.finalizarBtn.Enabled = false;    
+                    }
+
+                }
+                catch (Exception e)
+                {
+                }
+            }
+            else
+            {
+                this.detalleBtn.Enabled = false;
+                this.finalizarBtn.Enabled = false;
+            }
+            conexion.Close();
+            
+        }
+
+        public void setGastosData()
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                // For Add New Row (Loop this code for add multiple rows)
+                this.tableGastos.RowCount = this.tableGastos.RowCount + 1;
+                this.tableGastos.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
+                this.tableGastos.Controls.Add(new Label() { Text = "Street, City, State" }, 0, this.tableGastos.RowCount - 1);
+                this.tableGastos.Controls.Add(new Label() { Text = "888888888888" }, 1, this.tableGastos.RowCount - 1);
+                this.tableGastos.Controls.Add(new Label() { Text = "xxxxxxx@gmail.com" }, 2, this.tableGastos.RowCount - 1);
+                this.tableGastos.Controls.Add(new Label() { Text = "xxxxxxx@gmail.com" }, 3, this.tableGastos.RowCount - 1);
+
+            }
+        }
 
         #region items
 

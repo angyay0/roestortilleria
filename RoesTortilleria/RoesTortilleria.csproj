@@ -53,10 +53,10 @@
     <Compile Include="models\Customer.cs" />
     <Compile Include="models\Sale.cs" />
     <Compile Include="models\Spend.cs" />
-    <Compile Include="ROESDataSet.Designer.cs">
+    <Compile Include="RoesDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ROESDataSet.xsd</DependentUpon>
+      <DependentUpon>RoesDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="test\InventoryTest.cs" />
     <Compile Include="test\ProductionTest.cs" />
@@ -150,16 +150,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ROESDataSet.xsc">
-      <DependentUpon>ROESDataSet.xsd</DependentUpon>
+    <None Include="RoesDBDataSet.xsc">
+      <DependentUpon>RoesDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ROESDataSet.xsd">
+    <None Include="RoesDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ROESDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>RoesDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ROESDataSet.xss">
-      <DependentUpon>ROESDataSet.xsd</DependentUpon>
+    <None Include="RoesDBDataSet.xss">
+      <DependentUpon>RoesDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

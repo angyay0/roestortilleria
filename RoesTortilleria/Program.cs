@@ -38,7 +38,8 @@ namespace RoesTortilleria
             it.assertUnitAdd(10, 10, 1000, 1000, new float[] { 10, 10, 1000, 1000 });
             it.assertUnitSubtract(1, 1, 100, 100, new float[] { -1, -1, -100, -100 });
             */
-            Application.Run(new MainModule());
+
+            Application.Run(new LoginModule());
         }
     }
 }
