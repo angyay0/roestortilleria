@@ -38,3 +38,6 @@ C:\Users\Angel\Documents\Visual Studio 2015\Projects\RoesTortilleria\roes\RoesTo
 C:\Users\Angel\Documents\Visual Studio 2015\Projects\RoesTortilleria\roes\RoesTortilleria\obj\Debug\RoesTortilleria.Properties.Resources.resources
 C:\Users\Angel\Documents\Visual Studio 2015\Projects\RoesTortilleria\roes\RoesTortilleria\obj\Debug\RoesTortilleria.views.MainModule.resources
 C:\Users\Angel\Documents\Visual Studio 2015\Projects\RoesTortilleria\roes\RoesTortilleria\obj\Debug\RoesTortilleria.csproj.GenerateResource.Cache
+C:\Users\Georgepc\Desktop\Roes_Tortillera\roes\RoesTortilleria\bin\Debug\RoesTortilleria.exe.config
+C:\Users\Georgepc\Desktop\Roes_Tortillera\roes\RoesTortilleria\obj\Debug\RoesTortilleria.exe
+C:\Users\Georgepc\Desktop\Roes_Tortillera\roes\RoesTortilleria\obj\Debug\RoesTortilleria.pdb
