@@ -325,5 +325,12 @@ namespace RoesTortilleria.views
             finalizeProd finalize = new finalizeProd(this);
             finalize.ShowDialog();
         }
+
+        private void detalleBtn_Click(object sender, EventArgs e)
+        {
+            ShowDetail details = new ShowDetail(this.datePickerProd.Value);
+            details.ShowDialog();
+        }
+
     }
 }
