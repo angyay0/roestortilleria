@@ -94,6 +94,12 @@
     <Compile Include="views\ColorTabel.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Datos.cs" />
+    <Compile Include="views\finalizeProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\finalizeProd.Designer.cs">
+      <DependentUpon>finalizeProd.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\LoginModule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\AddVentaModule.resx">
       <DependentUpon>AddVentaModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\finalizeProd.resx">
+      <DependentUpon>finalizeProd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\LoginModule.resx">
       <DependentUpon>LoginModule.cs</DependentUpon>

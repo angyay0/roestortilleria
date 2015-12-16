@@ -5,10 +5,11 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RoesTortilleria.controllers
 {
-    class Production
+    public class Production
     {
         public float kgProduction = 0;
         public float kgFinalProd = 0;
@@ -22,8 +23,11 @@ namespace RoesTortilleria.controllers
         public float sobraMasa = 0;
         public float sobraTortilla = 0;
         public float sobraSabor = 0;
+        public float defaultValue = 0;
+        public bool hasData = false;
+        public int idProdDay = 0;
 
-        private DateTime dateToLook;
+        public DateTime dateToLook;
 
         public Production()
         {
@@ -54,6 +58,7 @@ namespace RoesTortilleria.controllers
             {
                 try
                 {
+                    idProdDay = (int)reader.GetInt32(0);
                     sMas = (float)(double)reader.GetDouble(1);
                     sMin = (float)(double)reader.GetDouble(2);
                     sKg = (float)(double)reader.GetDouble(3);
@@ -64,10 +69,17 @@ namespace RoesTortilleria.controllers
                     sobraSabor = (float)(double)reader.GetDouble(8);
                     kgFinalProd = (float)(double)reader.GetDouble(9);
 
+
+                    hasData = true;
+
                 }
                 catch (Exception e)
                 {
                 }
+            }
+            else
+            {
+                hasData = false;
             }
             conexion.Close();
         }
@@ -92,6 +104,7 @@ namespace RoesTortilleria.controllers
             {
                 try
                 {
+                    idProdDay = (int)reader.GetInt32(0);
                     sMas = (float)(double)reader.GetDouble(1);
                     sMin = (float)(double)reader.GetDouble(2);
                     sKg = (float)(double)reader.GetDouble(3);
@@ -102,10 +115,15 @@ namespace RoesTortilleria.controllers
                     sobraSabor = (float)(double)reader.GetDouble(8);
                     kgFinalProd = (float)(double)reader.GetDouble(9);
 
+                    hasData = true;
                 }
                 catch (Exception e)
                 {
                 }
+            }
+            else
+            {
+                hasData = false;
             }
             conexion.Close();
         }
@@ -154,7 +172,7 @@ namespace RoesTortilleria.controllers
             string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
             String query = 
             "INSERT INTO Produccion (sacoMaseca,kgMinsa,kgMExtra,kgMasa,kgTortilla,sMasa,sTortilla,tSabor,fTortilla,fecha) "+
-            " VALUES(@saco,@kgmin,@kgme,@kgm,@kgtor,@a,@b,@c,@ft,@fec)";
+            " VALUES(@saco,@kgmin,@kgme,@kgm,@kgtor,@sM,@smin,@tsa,@ft,@fec)";
 
             SqlCommand command = new SqlCommand(query, conexion);
             command.Parameters.Add("@saco", sMas);
@@ -162,13 +180,22 @@ namespace RoesTortilleria.controllers
             command.Parameters.Add("@kgme", sKg);
             command.Parameters.Add("@kgm", kgHarinas);
             command.Parameters.Add("@kgtor", kgTortilla);
-            command.Parameters.Add("@a", 0);
-            command.Parameters.Add("@b", 0);
-            command.Parameters.Add("@c", 0);
-            command.Parameters.Add("@ft", 0);
+            command.Parameters.Add("@sM", defaultValue);
+            command.Parameters.Add("@smin", defaultValue);
+            command.Parameters.Add("@tsa", defaultValue);
+            command.Parameters.Add("@ft", kgFinalProd);
             command.Parameters.Add("@fec", fecha);
-
-            command.ExecuteNonQuery();
+            
+            try
+            {
+               idProdDay= command.ExecuteNonQuery();
+                MessageBox.Show(
+                "Se ha agregado la Produccion!\nFinalizar la Producción al cuando se tengan los datos de la ventana finalizar!", "Correcto");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "ERROR");
+            }
 
             conexion.Close();
         }
@@ -182,23 +209,34 @@ namespace RoesTortilleria.controllers
             string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
             String query =
             "UPDATE Produccion SET sMasa = @a,sTortilla = @b,tSabor = @c, fTortilla = @ft"+
-            " Where fecha like '@fecha'";
+            " Where idProduccion = @id";
 
             SqlCommand command = new SqlCommand(query, conexion);
             command.Parameters.Add("@a", sobraMasa);
             command.Parameters.Add("@b", sobraTortilla);
             command.Parameters.Add("@c", sobraSabor);
             command.Parameters.Add("@ft", kgFinalProd);
-            command.Parameters.Add("@fecha", fecha);
+            command.Parameters.Add("@id", idProdDay);
+            //command.Parameters.Add("@fecha", fecha);
 
-            command.ExecuteNonQuery();
+            try
+            {
+                command.ExecuteNonQuery();
+                MessageBox.Show("Proceso de Producción Finalizado!", "Correcto");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "ERROR");
+            }
 
             conexion.Close();
         }
-
-        #region Produccion Diaria
-        public void makeDailyProduction(int sacoMaseca, int sacoMinsa, float kgMasaExtra)
+        
+        public void makeDailyProduction(float sacoMaseca, float sacoMinsa, float kgMasaExtra)
         {
+            retrieveDailyData();
+            retrieveDayBefore();
+
             sMas = sacoMaseca;
             sMin = sacoMinsa;
             sKg = kgMasaExtra;
@@ -229,47 +267,50 @@ namespace RoesTortilleria.controllers
 
             //Guardado temporal para ajustes al final del dia
             kgFinalProd = kgProduction;
+
+            saveProduction();
         }
 
-        private float retrieveProdDayBefore()
+        #region Produccion Diaria
+        public float retrieveProdDayBefore()
         {
             return kgProdYes;
         }
 
-        private float retrieveKgSobraDayBefore()
+        public float retrieveKgSobraDayBefore()
         {
             return kgSobraYes;
         }
 
-        private bool subtractSacoMaseca(int sacos)
+        public bool subtractSacoMaseca(int sacos)
         {
 
             return true;
         }
 
-        private bool subtractSacoMinsa(int sacos)
+        public bool subtractSacoMinsa(int sacos)
         {
             return true;
         }
 
-        private bool subtractAgua(float litros)
+        public bool subtractAgua(float litros)
         {
             return true;
         }
 
-        private bool subtractGas(float kg)
+        public bool subtractGas(float kg)
         {
             return true;
         }
 
         //Resta la tortilla que sobro de la produccion
-        private void subtractTortilla( float kgSobra)
+        public void subtractTortilla( float kgSobra)
         {
             kgFinalProd -= kgSobra;
         }
 
         //resta la cantidad de masa o tortilla que queda en la maquina
-        private void subtractMasa(float kgMasa)
+        public void subtractMasa(float kgMasa)
         {
             kgFinalProd -= kgMasa;
         }
@@ -279,8 +320,12 @@ namespace RoesTortilleria.controllers
             return kgFinalProd;
         }
 
+        #endregion
+
         public void finalizeProduction(float sobrante,float sabor,float masa)
         {
+            Console.WriteLine(sobrante + "-" + sabor + "-" + masa);
+
             sobraMasa = masa;
             sobraTortilla = sobrante;
             sobraSabor = sabor;
@@ -291,7 +336,6 @@ namespace RoesTortilleria.controllers
 
             saveFinalizedProduction();
         }
-
-        #endregion
+        
     }
 }

@@ -49,7 +49,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(229, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -72,7 +72,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(-1, 107);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(387, 12);
             this.pictureBox2.TabIndex = 21;
@@ -84,9 +84,9 @@
             this.label3.Location = new System.Drawing.Point(24, 226);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(214, 17);
+            this.label3.Size = new System.Drawing.Size(199, 17);
             this.label3.TabIndex = 26;
-            this.label3.Text = "Sacos de Harina Minsa Usados :";
+            this.label3.Text = "Kgs de Harina Minsa Usados :";
             // 
             // label2
             // 
@@ -111,7 +111,7 @@
             // sacoUsado
             // 
             this.sacoUsado.Location = new System.Drawing.Point(28, 187);
-            this.sacoUsado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sacoUsado.Margin = new System.Windows.Forms.Padding(4);
             this.sacoUsado.Name = "sacoUsado";
             this.sacoUsado.Size = new System.Drawing.Size(132, 22);
             this.sacoUsado.TabIndex = 29;
@@ -120,7 +120,7 @@
             // kgMinUsado
             // 
             this.kgMinUsado.Location = new System.Drawing.Point(28, 246);
-            this.kgMinUsado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kgMinUsado.Margin = new System.Windows.Forms.Padding(4);
             this.kgMinUsado.Name = "kgMinUsado";
             this.kgMinUsado.Size = new System.Drawing.Size(132, 22);
             this.kgMinUsado.TabIndex = 30;
@@ -129,7 +129,7 @@
             // masaExtra
             // 
             this.masaExtra.Location = new System.Drawing.Point(28, 306);
-            this.masaExtra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.masaExtra.Margin = new System.Windows.Forms.Padding(4);
             this.masaExtra.Name = "masaExtra";
             this.masaExtra.Size = new System.Drawing.Size(132, 22);
             this.masaExtra.TabIndex = 31;
@@ -156,13 +156,14 @@
             office2010Red1.TextColor = System.Drawing.Color.White;
             this.addBtn.ColorTable = office2010Red1;
             this.addBtn.Location = new System.Drawing.Point(245, 337);
-            this.addBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(4);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(100, 33);
             this.addBtn.TabIndex = 32;
             this.addBtn.Text = "Agregar Producción";
             this.addBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
             this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // AddProduccionModule
             // 
@@ -179,7 +180,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddProduccionModule";
             this.Text = "Agregar Producción";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

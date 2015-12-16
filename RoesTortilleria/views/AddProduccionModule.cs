@@ -7,18 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RoesTortilleria.controllers;
 
 namespace RoesTortilleria.views
 {
     public partial class AddProduccionModule : Form
     {
-        public AddProduccionModule()
+        public Production p;
+        public MainModule module;
+
+        public AddProduccionModule(MainModule module)
         {
             InitializeComponent();
             addBtn.Enabled = false;
             kgMinUsado.Enabled = false;
             masaExtra.Enabled = false;
+            p = new Production();
+            this.module = module;
         }
+        
 
         private void harinaUsada_TextChanged(object sender, EventArgs e)
         {
@@ -43,6 +50,14 @@ namespace RoesTortilleria.views
             {
                 addBtn.Enabled = true;
             }
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            p.makeDailyProduction((float)Convert.ToDouble(this.sacoUsado.Text),
+                (float)Convert.ToDouble(this.kgMinUsado.Text),(float)Convert.ToDouble(this.masaExtra.Text));
+            module.setProduccionData();
+            this.Close();
         }
     }
 }
