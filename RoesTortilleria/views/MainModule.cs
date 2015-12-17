@@ -582,6 +582,12 @@ namespace RoesTortilleria.views
             panel.RowCount--;
         }
 
+        private void btnCorte_Click(object sender, EventArgs e)
+        {
+            VentaDelDia vdia = new VentaDelDia(DateTime.Now);
+            vdia.ShowDialog();
+        }
+
         private void datePickerProd_ValueChanged(object sender, EventArgs e)
         {
             setProduccionData(this.datePickerProd.Value);

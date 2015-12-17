@@ -123,6 +123,12 @@
     <Compile Include="views\ShowDetail.Designer.cs">
       <DependentUpon>ShowDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\VentaDelDia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\VentaDelDia.Designer.cs">
+      <DependentUpon>VentaDelDia.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\Xbutton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\ShowDetail.resx">
       <DependentUpon>ShowDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\VentaDelDia.resx">
+      <DependentUpon>VentaDelDia.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

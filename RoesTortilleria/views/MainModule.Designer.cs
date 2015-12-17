@@ -33,13 +33,15 @@ namespace RoesTortilleria.views
         /// </summary>
         private void InitializeComponent()
         {
+            ManiXButton.Office2010Blue office2010Blue1 = new ManiXButton.Office2010Blue();
+            ManiXButton.Office2010Green office2010Green1 = new ManiXButton.Office2010Green();
+            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
+            ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainModule));
-            ManiXButton.Office2010Blue office2010Blue4 = new ManiXButton.Office2010Blue();
-            ManiXButton.Office2010Green office2010Green4 = new ManiXButton.Office2010Green();
-            ManiXButton.Office2010Yellow office2010Yellow4 = new ManiXButton.Office2010Yellow();
-            ManiXButton.Office2010Red office2010Red4 = new ManiXButton.Office2010Red();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
+            this.btnCorte = new ManiXButton.XButton();
+            this.addVenta = new ManiXButton.XButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.datePickerVenta = new System.Windows.Forms.DateTimePicker();
@@ -72,12 +74,15 @@ namespace RoesTortilleria.views
             this.tabCorte = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.tabProduc = new System.Windows.Forms.TabPage();
+            this.addProduccion = new ManiXButton.XButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.datePickerProd = new System.Windows.Forms.DateTimePicker();
             this.tableProd = new System.Windows.Forms.TableLayoutPanel();
+            this.detalleBtn = new ManiXButton.XButton();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.finalizarBtn = new ManiXButton.XButton();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -91,6 +96,7 @@ namespace RoesTortilleria.views
             this.lKGSobra = new System.Windows.Forms.Label();
             this.lFTortilla = new System.Windows.Forms.Label();
             this.tabAlmacen = new System.Windows.Forms.TabPage();
+            this.addInventario = new ManiXButton.XButton();
             this.label8 = new System.Windows.Forms.Label();
             this.tableInventario = new System.Windows.Forms.TableLayoutPanel();
             this.label33 = new System.Windows.Forms.Label();
@@ -98,6 +104,7 @@ namespace RoesTortilleria.views
             this.lSacosInv = new System.Windows.Forms.Label();
             this.lKGMInv = new System.Windows.Forms.Label();
             this.tabGastos = new System.Windows.Forms.TabPage();
+            this.addGasto = new ManiXButton.XButton();
             this.label9 = new System.Windows.Forms.Label();
             this.tableGastos = new System.Windows.Forms.TableLayoutPanel();
             this.label35 = new System.Windows.Forms.Label();
@@ -112,19 +119,12 @@ namespace RoesTortilleria.views
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.addCliente = new ManiXButton.XButton();
             this.tabFactNot = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCorte = new ManiXButton.XButton();
-            this.addVenta = new ManiXButton.XButton();
-            this.addProduccion = new ManiXButton.XButton();
-            this.detalleBtn = new ManiXButton.XButton();
-            this.finalizarBtn = new ManiXButton.XButton();
-            this.addInventario = new ManiXButton.XButton();
-            this.addGasto = new ManiXButton.XButton();
-            this.addCliente = new ManiXButton.XButton();
             this.tabControl.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tableVenta.SuspendLayout();
@@ -173,6 +173,65 @@ namespace RoesTortilleria.views
             this.tabVenta.Size = new System.Drawing.Size(953, 505);
             this.tabVenta.TabIndex = 2;
             this.tabVenta.Text = "Ventas";
+            // 
+            // btnCorte
+            // 
+            office2010Blue1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Blue1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Blue1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Blue1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Blue1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Blue1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Blue1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Blue1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Blue1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(97)))), ((int)(((byte)(181)))));
+            office2010Blue1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(125)))), ((int)(((byte)(219)))));
+            office2010Blue1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Blue1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Blue1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Blue1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Blue1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Blue1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Blue1.TextColor = System.Drawing.Color.White;
+            this.btnCorte.ColorTable = office2010Blue1;
+            this.btnCorte.Location = new System.Drawing.Point(836, 214);
+            this.btnCorte.Name = "btnCorte";
+            this.btnCorte.Size = new System.Drawing.Size(103, 44);
+            this.btnCorte.TabIndex = 5;
+            this.btnCorte.Text = "Venta del Día";
+            this.btnCorte.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
+            this.btnCorte.UseVisualStyleBackColor = true;
+            this.btnCorte.Click += new System.EventHandler(this.btnCorte_Click);
+            // 
+            // addVenta
+            // 
+            office2010Green1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Green1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Green1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Green1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Green1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Green1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Green1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green1.TextColor = System.Drawing.Color.White;
+            this.addVenta.ColorTable = office2010Green1;
+            this.addVenta.Location = new System.Drawing.Point(835, 159);
+            this.addVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.addVenta.Name = "addVenta";
+            this.addVenta.Size = new System.Drawing.Size(104, 48);
+            this.addVenta.TabIndex = 4;
+            this.addVenta.Text = "Agregar Venta";
+            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addVenta.UseVisualStyleBackColor = true;
+            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
             // 
             // label4
             // 
@@ -544,6 +603,19 @@ namespace RoesTortilleria.views
             this.tabProduc.TabIndex = 4;
             this.tabProduc.Text = "Producción del Día";
             // 
+            // addProduccion
+            // 
+            this.addProduccion.ColorTable = office2010Green1;
+            this.addProduccion.Location = new System.Drawing.Point(755, 133);
+            this.addProduccion.Margin = new System.Windows.Forms.Padding(4);
+            this.addProduccion.Name = "addProduccion";
+            this.addProduccion.Size = new System.Drawing.Size(160, 30);
+            this.addProduccion.TabIndex = 7;
+            this.addProduccion.Text = "Agregar Producción";
+            this.addProduccion.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addProduccion.UseVisualStyleBackColor = true;
+            this.addProduccion.Click += new System.EventHandler(this.addProduccion_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -611,6 +683,36 @@ namespace RoesTortilleria.views
             this.tableProd.Size = new System.Drawing.Size(886, 142);
             this.tableProd.TabIndex = 3;
             // 
+            // detalleBtn
+            // 
+            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow1.TextColor = System.Drawing.Color.White;
+            this.detalleBtn.ColorTable = office2010Yellow1;
+            this.detalleBtn.Location = new System.Drawing.Point(777, 7);
+            this.detalleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.detalleBtn.Name = "detalleBtn";
+            this.detalleBtn.Size = new System.Drawing.Size(102, 30);
+            this.detalleBtn.TabIndex = 8;
+            this.detalleBtn.Text = "Ver Detalle";
+            this.detalleBtn.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
+            this.detalleBtn.UseVisualStyleBackColor = true;
+            this.detalleBtn.Click += new System.EventHandler(this.detalleBtn_Click);
+            // 
             // label26
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -630,6 +732,37 @@ namespace RoesTortilleria.views
             this.label27.Size = new System.Drawing.Size(48, 17);
             this.label27.TabIndex = 1;
             this.label27.Text = "KILOS";
+            // 
+            // finalizarBtn
+            // 
+            this.finalizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Red1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Red1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Red1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Red1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red1.TextColor = System.Drawing.Color.White;
+            this.finalizarBtn.ColorTable = office2010Red1;
+            this.finalizarBtn.Location = new System.Drawing.Point(777, 76);
+            this.finalizarBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.finalizarBtn.Name = "finalizarBtn";
+            this.finalizarBtn.Size = new System.Drawing.Size(102, 30);
+            this.finalizarBtn.TabIndex = 8;
+            this.finalizarBtn.Text = "Finalizar";
+            this.finalizarBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
+            this.finalizarBtn.UseVisualStyleBackColor = true;
+            this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
             // 
             // label28
             // 
@@ -765,6 +898,19 @@ namespace RoesTortilleria.views
             this.tabAlmacen.TabIndex = 3;
             this.tabAlmacen.Text = "Almacen";
             // 
+            // addInventario
+            // 
+            this.addInventario.ColorTable = office2010Green1;
+            this.addInventario.Location = new System.Drawing.Point(726, 323);
+            this.addInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.addInventario.Name = "addInventario";
+            this.addInventario.Size = new System.Drawing.Size(149, 53);
+            this.addInventario.TabIndex = 9;
+            this.addInventario.Text = "Agregar a Inventario";
+            this.addInventario.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addInventario.UseVisualStyleBackColor = true;
+            this.addInventario.Click += new System.EventHandler(this.addInventario_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -854,6 +1000,19 @@ namespace RoesTortilleria.views
             this.tabGastos.TabIndex = 5;
             this.tabGastos.Text = "Gastos";
             // 
+            // addGasto
+            // 
+            this.addGasto.ColorTable = office2010Green1;
+            this.addGasto.Location = new System.Drawing.Point(773, 110);
+            this.addGasto.Margin = new System.Windows.Forms.Padding(4);
+            this.addGasto.Name = "addGasto";
+            this.addGasto.Size = new System.Drawing.Size(100, 33);
+            this.addGasto.TabIndex = 8;
+            this.addGasto.Text = "Agregar Gasto";
+            this.addGasto.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addGasto.UseVisualStyleBackColor = true;
+            this.addGasto.Click += new System.EventHandler(this.addGasto_Click);
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -884,7 +1043,7 @@ namespace RoesTortilleria.views
             this.tableGastos.MinimumSize = new System.Drawing.Size(796, 91);
             this.tableGastos.Name = "tableGastos";
             this.tableGastos.RowCount = 1;
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 299F));
             this.tableGastos.Size = new System.Drawing.Size(796, 302);
             this.tableGastos.TabIndex = 1;
             // 
@@ -892,7 +1051,7 @@ namespace RoesTortilleria.views
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(97, 153);
+            this.label35.Location = new System.Drawing.Point(101, 144);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(85, 17);
             this.label35.TabIndex = 0;
@@ -903,7 +1062,7 @@ namespace RoesTortilleria.views
             this.label36.AllowDrop = true;
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(300, 153);
+            this.label36.Location = new System.Drawing.Point(309, 144);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(77, 17);
             this.label36.TabIndex = 1;
@@ -913,7 +1072,7 @@ namespace RoesTortilleria.views
             // 
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(458, 153);
+            this.label37.Location = new System.Drawing.Point(471, 144);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(54, 17);
             this.label37.TabIndex = 2;
@@ -923,7 +1082,7 @@ namespace RoesTortilleria.views
             // 
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(646, 153);
+            this.label38.Location = new System.Drawing.Point(664, 144);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(53, 17);
             this.label38.TabIndex = 3;
@@ -965,7 +1124,7 @@ namespace RoesTortilleria.views
             this.tableCliente.MinimumSize = new System.Drawing.Size(696, 91);
             this.tableCliente.Name = "tableCliente";
             this.tableCliente.RowCount = 1;
-            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 330F));
             this.tableCliente.Size = new System.Drawing.Size(696, 333);
             this.tableCliente.TabIndex = 10;
             // 
@@ -973,7 +1132,7 @@ namespace RoesTortilleria.views
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(52, 158);
+            this.label21.Location = new System.Drawing.Point(52, 159);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 17);
             this.label21.TabIndex = 0;
@@ -983,7 +1142,7 @@ namespace RoesTortilleria.views
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(209, 158);
+            this.label22.Location = new System.Drawing.Point(209, 159);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(64, 17);
             this.label22.TabIndex = 1;
@@ -993,7 +1152,7 @@ namespace RoesTortilleria.views
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(333, 158);
+            this.label23.Location = new System.Drawing.Point(333, 159);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(64, 17);
             this.label23.TabIndex = 2;
@@ -1003,7 +1162,7 @@ namespace RoesTortilleria.views
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(483, 158);
+            this.label24.Location = new System.Drawing.Point(483, 159);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(67, 17);
             this.label24.TabIndex = 3;
@@ -1013,7 +1172,7 @@ namespace RoesTortilleria.views
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(628, 158);
+            this.label25.Location = new System.Drawing.Point(628, 159);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(61, 17);
             this.label25.TabIndex = 4;
@@ -1030,6 +1189,18 @@ namespace RoesTortilleria.views
             this.label10.Size = new System.Drawing.Size(197, 55);
             this.label10.TabIndex = 9;
             this.label10.Text = "Clientes";
+            // 
+            // addCliente
+            // 
+            this.addCliente.ColorTable = office2010Blue1;
+            this.addCliente.Location = new System.Drawing.Point(678, 57);
+            this.addCliente.Name = "addCliente";
+            this.addCliente.Size = new System.Drawing.Size(82, 35);
+            this.addCliente.TabIndex = 11;
+            this.addCliente.Text = "Agregar Cliente";
+            this.addCliente.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
+            this.addCliente.UseVisualStyleBackColor = true;
+            this.addCliente.Click += new System.EventHandler(this.addCliente_Click);
             // 
             // tabFactNot
             // 
@@ -1080,172 +1251,6 @@ namespace RoesTortilleria.views
             this.label2.Size = new System.Drawing.Size(201, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Jorge Armando Rojas Montero";
-            // 
-            // btnCorte
-            // 
-            office2010Blue4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Blue4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Blue4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Blue4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Blue4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Blue4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Blue4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Blue4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Blue4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(97)))), ((int)(((byte)(181)))));
-            office2010Blue4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(125)))), ((int)(((byte)(219)))));
-            office2010Blue4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Blue4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Blue4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Blue4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Blue4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Blue4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Blue4.TextColor = System.Drawing.Color.White;
-            this.btnCorte.ColorTable = office2010Blue4;
-            this.btnCorte.Location = new System.Drawing.Point(836, 214);
-            this.btnCorte.Name = "btnCorte";
-            this.btnCorte.Size = new System.Drawing.Size(103, 44);
-            this.btnCorte.TabIndex = 5;
-            this.btnCorte.Text = "Venta del Día";
-            this.btnCorte.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
-            this.btnCorte.UseVisualStyleBackColor = true;
-            // 
-            // addVenta
-            // 
-            office2010Green4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Green4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Green4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Green4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Green4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Green4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Green4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green4.TextColor = System.Drawing.Color.White;
-            this.addVenta.ColorTable = office2010Green4;
-            this.addVenta.Location = new System.Drawing.Point(835, 159);
-            this.addVenta.Margin = new System.Windows.Forms.Padding(4);
-            this.addVenta.Name = "addVenta";
-            this.addVenta.Size = new System.Drawing.Size(104, 48);
-            this.addVenta.TabIndex = 4;
-            this.addVenta.Text = "Agregar Venta";
-            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addVenta.UseVisualStyleBackColor = true;
-            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
-            // 
-            // addProduccion
-            // 
-            this.addProduccion.Location = new System.Drawing.Point(755, 133);
-            this.addProduccion.Margin = new System.Windows.Forms.Padding(4);
-            this.addProduccion.Name = "addProduccion";
-            this.addProduccion.Size = new System.Drawing.Size(160, 30);
-            this.addProduccion.TabIndex = 7;
-            this.addProduccion.Text = "Agregar Producción";
-            this.addProduccion.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addProduccion.UseVisualStyleBackColor = true;
-            this.addProduccion.Click += new System.EventHandler(this.addProduccion_Click);
-            // 
-            // detalleBtn
-            // 
-            office2010Yellow4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow4.TextColor = System.Drawing.Color.White;
-            this.detalleBtn.ColorTable = office2010Yellow4;
-            this.detalleBtn.Location = new System.Drawing.Point(777, 7);
-            this.detalleBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.detalleBtn.Name = "detalleBtn";
-            this.detalleBtn.Size = new System.Drawing.Size(102, 30);
-            this.detalleBtn.TabIndex = 8;
-            this.detalleBtn.Text = "Ver Detalle";
-            this.detalleBtn.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
-            this.detalleBtn.UseVisualStyleBackColor = true;
-            this.detalleBtn.Click += new System.EventHandler(this.detalleBtn_Click);
-            // 
-            // finalizarBtn
-            // 
-            this.finalizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            office2010Red4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Red4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Red4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Red4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Red4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Red4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Red4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red4.TextColor = System.Drawing.Color.White;
-            this.finalizarBtn.ColorTable = office2010Red4;
-            this.finalizarBtn.Location = new System.Drawing.Point(777, 76);
-            this.finalizarBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.finalizarBtn.Name = "finalizarBtn";
-            this.finalizarBtn.Size = new System.Drawing.Size(102, 30);
-            this.finalizarBtn.TabIndex = 8;
-            this.finalizarBtn.Text = "Finalizar";
-            this.finalizarBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
-            this.finalizarBtn.UseVisualStyleBackColor = true;
-            this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
-            // 
-            // addInventario
-            // 
-            this.addInventario.Location = new System.Drawing.Point(726, 323);
-            this.addInventario.Margin = new System.Windows.Forms.Padding(4);
-            this.addInventario.Name = "addInventario";
-            this.addInventario.Size = new System.Drawing.Size(149, 53);
-            this.addInventario.TabIndex = 9;
-            this.addInventario.Text = "Agregar a Inventario";
-            this.addInventario.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addInventario.UseVisualStyleBackColor = true;
-            this.addInventario.Click += new System.EventHandler(this.addInventario_Click);
-            // 
-            // addGasto
-            // 
-            this.addGasto.Location = new System.Drawing.Point(773, 110);
-            this.addGasto.Margin = new System.Windows.Forms.Padding(4);
-            this.addGasto.Name = "addGasto";
-            this.addGasto.Size = new System.Drawing.Size(100, 33);
-            this.addGasto.TabIndex = 8;
-            this.addGasto.Text = "Agregar Gasto";
-            this.addGasto.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addGasto.UseVisualStyleBackColor = true;
-            this.addGasto.Click += new System.EventHandler(this.addGasto_Click);
-            // 
-            // addCliente
-            // 
-            this.addCliente.Location = new System.Drawing.Point(678, 57);
-            this.addCliente.Name = "addCliente";
-            this.addCliente.Size = new System.Drawing.Size(82, 35);
-            this.addCliente.TabIndex = 11;
-            this.addCliente.Text = "Agregar Cliente";
-            this.addCliente.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
-            this.addCliente.UseVisualStyleBackColor = true;
-            this.addCliente.Click += new System.EventHandler(this.addCliente_Click);
             // 
             // MainModule
             // 
