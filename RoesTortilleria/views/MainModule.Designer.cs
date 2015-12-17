@@ -33,13 +33,13 @@ namespace RoesTortilleria.views
         /// </summary>
         private void InitializeComponent()
         {
-            ManiXButton.Office2010Green office2010Green1 = new ManiXButton.Office2010Green();
-            ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
-            ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainModule));
+            ManiXButton.Office2010Blue office2010Blue4 = new ManiXButton.Office2010Blue();
+            ManiXButton.Office2010Green office2010Green4 = new ManiXButton.Office2010Green();
+            ManiXButton.Office2010Yellow office2010Yellow4 = new ManiXButton.Office2010Yellow();
+            ManiXButton.Office2010Red office2010Red4 = new ManiXButton.Office2010Red();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
-            this.addVenta = new ManiXButton.XButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.datePickerVenta = new System.Windows.Forms.DateTimePicker();
@@ -62,8 +62,8 @@ namespace RoesTortilleria.views
             this.normal_900 = new System.Windows.Forms.TextBox();
             this.especial_Normal = new System.Windows.Forms.TextBox();
             this.mostador_Sabor = new System.Windows.Forms.TextBox();
-            this.mostrador_800 = new System.Windows.Forms.TextBox();
-            this.mostador_900 = new System.Windows.Forms.TextBox();
+            this.sabor_800 = new System.Windows.Forms.TextBox();
+            this.sabor_900 = new System.Windows.Forms.TextBox();
             this.especial_Sabor = new System.Windows.Forms.TextBox();
             this.monto_Mostrador = new System.Windows.Forms.TextBox();
             this.monto_800 = new System.Windows.Forms.TextBox();
@@ -72,15 +72,12 @@ namespace RoesTortilleria.views
             this.tabCorte = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.tabProduc = new System.Windows.Forms.TabPage();
-            this.addProduccion = new ManiXButton.XButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.datePickerProd = new System.Windows.Forms.DateTimePicker();
             this.tableProd = new System.Windows.Forms.TableLayoutPanel();
-            this.detalleBtn = new ManiXButton.XButton();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.finalizarBtn = new ManiXButton.XButton();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -94,7 +91,6 @@ namespace RoesTortilleria.views
             this.lKGSobra = new System.Windows.Forms.Label();
             this.lFTortilla = new System.Windows.Forms.Label();
             this.tabAlmacen = new System.Windows.Forms.TabPage();
-            this.addInventario = new ManiXButton.XButton();
             this.label8 = new System.Windows.Forms.Label();
             this.tableInventario = new System.Windows.Forms.TableLayoutPanel();
             this.label33 = new System.Windows.Forms.Label();
@@ -102,7 +98,6 @@ namespace RoesTortilleria.views
             this.lSacosInv = new System.Windows.Forms.Label();
             this.lKGMInv = new System.Windows.Forms.Label();
             this.tabGastos = new System.Windows.Forms.TabPage();
-            this.addGasto = new ManiXButton.XButton();
             this.label9 = new System.Windows.Forms.Label();
             this.tableGastos = new System.Windows.Forms.TableLayoutPanel();
             this.label35 = new System.Windows.Forms.Label();
@@ -110,7 +105,6 @@ namespace RoesTortilleria.views
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.tabClientes = new System.Windows.Forms.TabPage();
-            this.addCliente = new ManiXButton.XButton();
             this.tableCliente = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -123,6 +117,14 @@ namespace RoesTortilleria.views
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCorte = new ManiXButton.XButton();
+            this.addVenta = new ManiXButton.XButton();
+            this.addProduccion = new ManiXButton.XButton();
+            this.detalleBtn = new ManiXButton.XButton();
+            this.finalizarBtn = new ManiXButton.XButton();
+            this.addInventario = new ManiXButton.XButton();
+            this.addGasto = new ManiXButton.XButton();
+            this.addCliente = new ManiXButton.XButton();
             this.tabControl.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tableVenta.SuspendLayout();
@@ -158,55 +160,27 @@ namespace RoesTortilleria.views
             // tabVenta
             // 
             this.tabVenta.BackColor = System.Drawing.SystemColors.Control;
+            this.tabVenta.Controls.Add(this.btnCorte);
             this.tabVenta.Controls.Add(this.addVenta);
             this.tabVenta.Controls.Add(this.label4);
             this.tabVenta.Controls.Add(this.label3);
             this.tabVenta.Controls.Add(this.datePickerVenta);
             this.tabVenta.Controls.Add(this.tableVenta);
             this.tabVenta.Location = new System.Drawing.Point(4, 25);
-            this.tabVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabVenta.Margin = new System.Windows.Forms.Padding(2);
             this.tabVenta.Name = "tabVenta";
-            this.tabVenta.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabVenta.Padding = new System.Windows.Forms.Padding(2);
             this.tabVenta.Size = new System.Drawing.Size(953, 505);
             this.tabVenta.TabIndex = 2;
             this.tabVenta.Text = "Ventas";
-            // 
-            // addVenta
-            // 
-            office2010Green1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Green1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Green1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Green1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Green1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
-            office2010Green1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
-            office2010Green1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Green1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Green1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Green1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Green1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Green1.TextColor = System.Drawing.Color.White;
-            this.addVenta.ColorTable = office2010Green1;
-            this.addVenta.Location = new System.Drawing.Point(835, 159);
-            this.addVenta.Margin = new System.Windows.Forms.Padding(4);
-            this.addVenta.Name = "addVenta";
-            this.addVenta.Size = new System.Drawing.Size(104, 48);
-            this.addVenta.TabIndex = 4;
-            this.addVenta.Text = "Agregar Venta";
-            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addVenta.UseVisualStyleBackColor = true;
-            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label4.Location = new System.Drawing.Point(19, 50);
+            this.label4.Location = new System.Drawing.Point(14, 41);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(216, 69);
             this.label4.TabIndex = 3;
@@ -215,7 +189,8 @@ namespace RoesTortilleria.views
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(568, 92);
+            this.label3.Location = new System.Drawing.Point(426, 75);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 2;
@@ -223,11 +198,12 @@ namespace RoesTortilleria.views
             // 
             // datePickerVenta
             // 
-            this.datePickerVenta.Location = new System.Drawing.Point(623, 92);
-            this.datePickerVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.datePickerVenta.Location = new System.Drawing.Point(513, 75);
+            this.datePickerVenta.Margin = new System.Windows.Forms.Padding(2);
             this.datePickerVenta.Name = "datePickerVenta";
-            this.datePickerVenta.Size = new System.Drawing.Size(200, 22);
+            this.datePickerVenta.Size = new System.Drawing.Size(151, 22);
             this.datePickerVenta.TabIndex = 1;
+            this.datePickerVenta.ValueChanged += new System.EventHandler(this.datePickerVenta_ValueChanged);
             // 
             // tableVenta
             // 
@@ -256,16 +232,16 @@ namespace RoesTortilleria.views
             this.tableVenta.Controls.Add(this.normal_900, 2, 3);
             this.tableVenta.Controls.Add(this.especial_Normal, 2, 4);
             this.tableVenta.Controls.Add(this.mostador_Sabor, 3, 1);
-            this.tableVenta.Controls.Add(this.mostrador_800, 3, 2);
-            this.tableVenta.Controls.Add(this.mostador_900, 3, 3);
+            this.tableVenta.Controls.Add(this.sabor_800, 3, 2);
+            this.tableVenta.Controls.Add(this.sabor_900, 3, 3);
             this.tableVenta.Controls.Add(this.especial_Sabor, 3, 4);
             this.tableVenta.Controls.Add(this.monto_Mostrador, 4, 1);
             this.tableVenta.Controls.Add(this.monto_800, 4, 2);
             this.tableVenta.Controls.Add(this.monto_900, 4, 3);
             this.tableVenta.Controls.Add(this.especial_monto, 4, 4);
             this.tableVenta.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableVenta.Location = new System.Drawing.Point(32, 159);
-            this.tableVenta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableVenta.Location = new System.Drawing.Point(24, 129);
+            this.tableVenta.Margin = new System.Windows.Forms.Padding(2);
             this.tableVenta.Name = "tableVenta";
             this.tableVenta.RowCount = 5;
             this.tableVenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -273,15 +249,14 @@ namespace RoesTortilleria.views
             this.tableVenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableVenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableVenta.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableVenta.Size = new System.Drawing.Size(796, 286);
+            this.tableVenta.Size = new System.Drawing.Size(803, 273);
             this.tableVenta.TabIndex = 0;
             // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(46, 21);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(47, 20);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(68, 17);
             this.label12.TabIndex = 0;
@@ -291,8 +266,7 @@ namespace RoesTortilleria.views
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(206, 21);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(209, 20);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(64, 17);
             this.label13.TabIndex = 1;
@@ -302,8 +276,7 @@ namespace RoesTortilleria.views
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(370, 21);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(375, 20);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 17);
             this.label14.TabIndex = 2;
@@ -313,8 +286,7 @@ namespace RoesTortilleria.views
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(531, 21);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(538, 20);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(46, 17);
             this.label15.TabIndex = 3;
@@ -324,8 +296,7 @@ namespace RoesTortilleria.views
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(690, 21);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(698, 20);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(47, 17);
             this.label16.TabIndex = 4;
@@ -335,8 +306,7 @@ namespace RoesTortilleria.views
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(44, 77);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(45, 74);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(72, 17);
             this.label17.TabIndex = 5;
@@ -346,8 +316,7 @@ namespace RoesTortilleria.views
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(58, 133);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(59, 128);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(45, 17);
             this.label18.TabIndex = 6;
@@ -357,8 +326,7 @@ namespace RoesTortilleria.views
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(58, 189);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(59, 182);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(45, 17);
             this.label19.TabIndex = 7;
@@ -369,21 +337,19 @@ namespace RoesTortilleria.views
             // 
             this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(50, 246);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(31, 236);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 17);
+            this.label20.Size = new System.Drawing.Size(101, 17);
             this.label20.TabIndex = 8;
-            this.label20.Text = "Especial";
+            this.label20.Text = "Especial Oasis";
             // 
             // cantidadMostrador
             // 
             this.cantidadMostrador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cantidadMostrador.Enabled = false;
-            this.cantidadMostrador.Location = new System.Drawing.Point(166, 74);
-            this.cantidadMostrador.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidadMostrador.Location = new System.Drawing.Point(187, 71);
             this.cantidadMostrador.Name = "cantidadMostrador";
-            this.cantidadMostrador.Size = new System.Drawing.Size(144, 22);
+            this.cantidadMostrador.Size = new System.Drawing.Size(109, 22);
             this.cantidadMostrador.TabIndex = 9;
             this.cantidadMostrador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -391,10 +357,9 @@ namespace RoesTortilleria.views
             // 
             this.cantidad_800.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cantidad_800.Enabled = false;
-            this.cantidad_800.Location = new System.Drawing.Point(166, 130);
-            this.cantidad_800.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad_800.Location = new System.Drawing.Point(187, 125);
             this.cantidad_800.Name = "cantidad_800";
-            this.cantidad_800.Size = new System.Drawing.Size(144, 22);
+            this.cantidad_800.Size = new System.Drawing.Size(109, 22);
             this.cantidad_800.TabIndex = 10;
             this.cantidad_800.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -402,30 +367,29 @@ namespace RoesTortilleria.views
             // 
             this.cantidad_900.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cantidad_900.Enabled = false;
-            this.cantidad_900.Location = new System.Drawing.Point(172, 186);
-            this.cantidad_900.Margin = new System.Windows.Forms.Padding(4);
+            this.cantidad_900.Location = new System.Drawing.Point(191, 179);
             this.cantidad_900.Name = "cantidad_900";
-            this.cantidad_900.Size = new System.Drawing.Size(132, 22);
+            this.cantidad_900.Size = new System.Drawing.Size(100, 22);
             this.cantidad_900.TabIndex = 11;
+            this.cantidad_900.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // especial_cantidad
             // 
             this.especial_cantidad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.especial_cantidad.Enabled = false;
-            this.especial_cantidad.Location = new System.Drawing.Point(172, 244);
-            this.especial_cantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.especial_cantidad.Location = new System.Drawing.Point(191, 233);
             this.especial_cantidad.Name = "especial_cantidad";
-            this.especial_cantidad.Size = new System.Drawing.Size(132, 22);
+            this.especial_cantidad.Size = new System.Drawing.Size(100, 22);
             this.especial_cantidad.TabIndex = 12;
+            this.especial_cantidad.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // mostrador_Normal
             // 
             this.mostrador_Normal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mostrador_Normal.Enabled = false;
-            this.mostrador_Normal.Location = new System.Drawing.Point(330, 74);
-            this.mostrador_Normal.Margin = new System.Windows.Forms.Padding(4);
+            this.mostrador_Normal.Location = new System.Drawing.Point(351, 71);
             this.mostrador_Normal.Name = "mostrador_Normal";
-            this.mostrador_Normal.Size = new System.Drawing.Size(132, 22);
+            this.mostrador_Normal.Size = new System.Drawing.Size(100, 22);
             this.mostrador_Normal.TabIndex = 13;
             this.mostrador_Normal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -433,10 +397,9 @@ namespace RoesTortilleria.views
             // 
             this.normal_800.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.normal_800.Enabled = false;
-            this.normal_800.Location = new System.Drawing.Point(328, 130);
-            this.normal_800.Margin = new System.Windows.Forms.Padding(4);
+            this.normal_800.Location = new System.Drawing.Point(349, 125);
             this.normal_800.Name = "normal_800";
-            this.normal_800.Size = new System.Drawing.Size(137, 22);
+            this.normal_800.Size = new System.Drawing.Size(104, 22);
             this.normal_800.TabIndex = 14;
             this.normal_800.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -444,10 +407,9 @@ namespace RoesTortilleria.views
             // 
             this.normal_900.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.normal_900.Enabled = false;
-            this.normal_900.Location = new System.Drawing.Point(328, 186);
-            this.normal_900.Margin = new System.Windows.Forms.Padding(4);
+            this.normal_900.Location = new System.Drawing.Point(349, 179);
             this.normal_900.Name = "normal_900";
-            this.normal_900.Size = new System.Drawing.Size(137, 22);
+            this.normal_900.Size = new System.Drawing.Size(104, 22);
             this.normal_900.TabIndex = 15;
             this.normal_900.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -455,10 +417,9 @@ namespace RoesTortilleria.views
             // 
             this.especial_Normal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.especial_Normal.Enabled = false;
-            this.especial_Normal.Location = new System.Drawing.Point(330, 244);
-            this.especial_Normal.Margin = new System.Windows.Forms.Padding(4);
+            this.especial_Normal.Location = new System.Drawing.Point(351, 233);
             this.especial_Normal.Name = "especial_Normal";
-            this.especial_Normal.Size = new System.Drawing.Size(132, 22);
+            this.especial_Normal.Size = new System.Drawing.Size(100, 22);
             this.especial_Normal.TabIndex = 16;
             this.especial_Normal.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -466,43 +427,39 @@ namespace RoesTortilleria.views
             // 
             this.mostador_Sabor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mostador_Sabor.Enabled = false;
-            this.mostador_Sabor.Location = new System.Drawing.Point(488, 74);
-            this.mostador_Sabor.Margin = new System.Windows.Forms.Padding(4);
+            this.mostador_Sabor.Location = new System.Drawing.Point(511, 71);
             this.mostador_Sabor.Name = "mostador_Sabor";
-            this.mostador_Sabor.Size = new System.Drawing.Size(132, 22);
+            this.mostador_Sabor.Size = new System.Drawing.Size(100, 22);
             this.mostador_Sabor.TabIndex = 17;
             this.mostador_Sabor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // mostrador_800
+            // sabor_800
             // 
-            this.mostrador_800.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mostrador_800.Enabled = false;
-            this.mostrador_800.Location = new System.Drawing.Point(488, 130);
-            this.mostrador_800.Margin = new System.Windows.Forms.Padding(4);
-            this.mostrador_800.Name = "mostrador_800";
-            this.mostrador_800.Size = new System.Drawing.Size(132, 22);
-            this.mostrador_800.TabIndex = 18;
-            this.mostrador_800.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sabor_800.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sabor_800.Enabled = false;
+            this.sabor_800.Location = new System.Drawing.Point(511, 125);
+            this.sabor_800.Name = "sabor_800";
+            this.sabor_800.Size = new System.Drawing.Size(100, 22);
+            this.sabor_800.TabIndex = 18;
+            this.sabor_800.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // mostador_900
+            // sabor_900
             // 
-            this.mostador_900.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mostador_900.Enabled = false;
-            this.mostador_900.Location = new System.Drawing.Point(488, 186);
-            this.mostador_900.Margin = new System.Windows.Forms.Padding(4);
-            this.mostador_900.Name = "mostador_900";
-            this.mostador_900.Size = new System.Drawing.Size(132, 22);
-            this.mostador_900.TabIndex = 19;
-            this.mostador_900.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.sabor_900.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.sabor_900.Enabled = false;
+            this.sabor_900.Location = new System.Drawing.Point(511, 179);
+            this.sabor_900.Name = "sabor_900";
+            this.sabor_900.Size = new System.Drawing.Size(100, 22);
+            this.sabor_900.TabIndex = 19;
+            this.sabor_900.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // especial_Sabor
             // 
             this.especial_Sabor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.especial_Sabor.Enabled = false;
-            this.especial_Sabor.Location = new System.Drawing.Point(488, 244);
-            this.especial_Sabor.Margin = new System.Windows.Forms.Padding(4);
+            this.especial_Sabor.Location = new System.Drawing.Point(511, 233);
             this.especial_Sabor.Name = "especial_Sabor";
-            this.especial_Sabor.Size = new System.Drawing.Size(132, 22);
+            this.especial_Sabor.Size = new System.Drawing.Size(100, 22);
             this.especial_Sabor.TabIndex = 20;
             this.especial_Sabor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -510,10 +467,9 @@ namespace RoesTortilleria.views
             // 
             this.monto_Mostrador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.monto_Mostrador.Enabled = false;
-            this.monto_Mostrador.Location = new System.Drawing.Point(648, 74);
-            this.monto_Mostrador.Margin = new System.Windows.Forms.Padding(4);
+            this.monto_Mostrador.Location = new System.Drawing.Point(671, 71);
             this.monto_Mostrador.Name = "monto_Mostrador";
-            this.monto_Mostrador.Size = new System.Drawing.Size(132, 22);
+            this.monto_Mostrador.Size = new System.Drawing.Size(100, 22);
             this.monto_Mostrador.TabIndex = 21;
             this.monto_Mostrador.Text = "$0.00";
             this.monto_Mostrador.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -522,10 +478,9 @@ namespace RoesTortilleria.views
             // 
             this.monto_800.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.monto_800.Enabled = false;
-            this.monto_800.Location = new System.Drawing.Point(648, 130);
-            this.monto_800.Margin = new System.Windows.Forms.Padding(4);
+            this.monto_800.Location = new System.Drawing.Point(671, 125);
             this.monto_800.Name = "monto_800";
-            this.monto_800.Size = new System.Drawing.Size(132, 22);
+            this.monto_800.Size = new System.Drawing.Size(100, 22);
             this.monto_800.TabIndex = 22;
             this.monto_800.Text = "$0.00";
             this.monto_800.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -534,10 +489,9 @@ namespace RoesTortilleria.views
             // 
             this.monto_900.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.monto_900.Enabled = false;
-            this.monto_900.Location = new System.Drawing.Point(648, 186);
-            this.monto_900.Margin = new System.Windows.Forms.Padding(4);
+            this.monto_900.Location = new System.Drawing.Point(671, 179);
             this.monto_900.Name = "monto_900";
-            this.monto_900.Size = new System.Drawing.Size(132, 22);
+            this.monto_900.Size = new System.Drawing.Size(100, 22);
             this.monto_900.TabIndex = 23;
             this.monto_900.Text = "$0.00";
             this.monto_900.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -546,10 +500,9 @@ namespace RoesTortilleria.views
             // 
             this.especial_monto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.especial_monto.Enabled = false;
-            this.especial_monto.Location = new System.Drawing.Point(648, 244);
-            this.especial_monto.Margin = new System.Windows.Forms.Padding(4);
+            this.especial_monto.Location = new System.Drawing.Point(671, 233);
             this.especial_monto.Name = "especial_monto";
-            this.especial_monto.Size = new System.Drawing.Size(132, 22);
+            this.especial_monto.Size = new System.Drawing.Size(100, 22);
             this.especial_monto.TabIndex = 24;
             this.especial_monto.Text = "$0.00";
             this.especial_monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -590,19 +543,6 @@ namespace RoesTortilleria.views
             this.tabProduc.Size = new System.Drawing.Size(953, 505);
             this.tabProduc.TabIndex = 4;
             this.tabProduc.Text = "Producción del Día";
-            // 
-            // addProduccion
-            // 
-            this.addProduccion.ColorTable = office2010Green1;
-            this.addProduccion.Location = new System.Drawing.Point(755, 133);
-            this.addProduccion.Margin = new System.Windows.Forms.Padding(4);
-            this.addProduccion.Name = "addProduccion";
-            this.addProduccion.Size = new System.Drawing.Size(160, 30);
-            this.addProduccion.TabIndex = 7;
-            this.addProduccion.Text = "Agregar Producción";
-            this.addProduccion.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addProduccion.UseVisualStyleBackColor = true;
-            this.addProduccion.Click += new System.EventHandler(this.addProduccion_Click);
             // 
             // label7
             // 
@@ -671,36 +611,6 @@ namespace RoesTortilleria.views
             this.tableProd.Size = new System.Drawing.Size(886, 142);
             this.tableProd.TabIndex = 3;
             // 
-            // detalleBtn
-            // 
-            office2010Yellow1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Yellow1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Yellow1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Yellow1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Yellow1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
-            office2010Yellow1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
-            office2010Yellow1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Yellow1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Yellow1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Yellow1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Yellow1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Yellow1.TextColor = System.Drawing.Color.White;
-            this.detalleBtn.ColorTable = office2010Yellow1;
-            this.detalleBtn.Location = new System.Drawing.Point(777, 7);
-            this.detalleBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.detalleBtn.Name = "detalleBtn";
-            this.detalleBtn.Size = new System.Drawing.Size(102, 30);
-            this.detalleBtn.TabIndex = 8;
-            this.detalleBtn.Text = "Ver Detalle";
-            this.detalleBtn.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
-            this.detalleBtn.UseVisualStyleBackColor = true;
-            this.detalleBtn.Click += new System.EventHandler(this.detalleBtn_Click);
-            // 
             // label26
             // 
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -720,37 +630,6 @@ namespace RoesTortilleria.views
             this.label27.Size = new System.Drawing.Size(48, 17);
             this.label27.TabIndex = 1;
             this.label27.Text = "KILOS";
-            // 
-            // finalizarBtn
-            // 
-            this.finalizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            office2010Red1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
-            office2010Red1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
-            office2010Red1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
-            office2010Red1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
-            office2010Red1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
-            office2010Red1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
-            office2010Red1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
-            office2010Red1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
-            office2010Red1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
-            office2010Red1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
-            office2010Red1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
-            office2010Red1.TextColor = System.Drawing.Color.White;
-            this.finalizarBtn.ColorTable = office2010Red1;
-            this.finalizarBtn.Location = new System.Drawing.Point(777, 76);
-            this.finalizarBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.finalizarBtn.Name = "finalizarBtn";
-            this.finalizarBtn.Size = new System.Drawing.Size(102, 30);
-            this.finalizarBtn.TabIndex = 8;
-            this.finalizarBtn.Text = "Finalizar";
-            this.finalizarBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
-            this.finalizarBtn.UseVisualStyleBackColor = true;
-            this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
             // 
             // label28
             // 
@@ -886,19 +765,6 @@ namespace RoesTortilleria.views
             this.tabAlmacen.TabIndex = 3;
             this.tabAlmacen.Text = "Almacen";
             // 
-            // addInventario
-            // 
-            this.addInventario.ColorTable = office2010Green1;
-            this.addInventario.Location = new System.Drawing.Point(726, 323);
-            this.addInventario.Margin = new System.Windows.Forms.Padding(4);
-            this.addInventario.Name = "addInventario";
-            this.addInventario.Size = new System.Drawing.Size(149, 53);
-            this.addInventario.TabIndex = 9;
-            this.addInventario.Text = "Agregar a Inventario";
-            this.addInventario.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addInventario.UseVisualStyleBackColor = true;
-            this.addInventario.Click += new System.EventHandler(this.addInventario_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -988,19 +854,6 @@ namespace RoesTortilleria.views
             this.tabGastos.TabIndex = 5;
             this.tabGastos.Text = "Gastos";
             // 
-            // addGasto
-            // 
-            this.addGasto.ColorTable = office2010Green1;
-            this.addGasto.Location = new System.Drawing.Point(773, 110);
-            this.addGasto.Margin = new System.Windows.Forms.Padding(4);
-            this.addGasto.Name = "addGasto";
-            this.addGasto.Size = new System.Drawing.Size(100, 33);
-            this.addGasto.TabIndex = 8;
-            this.addGasto.Text = "Agregar Gasto";
-            this.addGasto.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addGasto.UseVisualStyleBackColor = true;
-            this.addGasto.Click += new System.EventHandler(this.addGasto_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -1031,8 +884,8 @@ namespace RoesTortilleria.views
             this.tableGastos.MinimumSize = new System.Drawing.Size(796, 91);
             this.tableGastos.Name = "tableGastos";
             this.tableGastos.RowCount = 1;
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 318F));
-            this.tableGastos.Size = new System.Drawing.Size(796, 300);
+            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableGastos.Size = new System.Drawing.Size(796, 302);
             this.tableGastos.TabIndex = 1;
             // 
             // label35
@@ -1079,64 +932,48 @@ namespace RoesTortilleria.views
             // tabClientes
             // 
             this.tabClientes.BackColor = System.Drawing.SystemColors.Control;
-            this.tabClientes.Controls.Add(this.addCliente);
             this.tabClientes.Controls.Add(this.tableCliente);
             this.tabClientes.Controls.Add(this.label10);
+            this.tabClientes.Controls.Add(this.addCliente);
             this.tabClientes.Location = new System.Drawing.Point(4, 25);
-            this.tabClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabClientes.Margin = new System.Windows.Forms.Padding(2);
             this.tabClientes.Name = "tabClientes";
-            this.tabClientes.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabClientes.Padding = new System.Windows.Forms.Padding(2);
             this.tabClientes.Size = new System.Drawing.Size(953, 505);
             this.tabClientes.TabIndex = 1;
             this.tabClientes.Text = "Clientes";
             // 
-            // addCliente
-            // 
-            this.addCliente.ColorTable = office2010Green1;
-            this.addCliente.Location = new System.Drawing.Point(77, 123);
-            this.addCliente.Margin = new System.Windows.Forms.Padding(4);
-            this.addCliente.Name = "addCliente";
-            this.addCliente.Size = new System.Drawing.Size(128, 28);
-            this.addCliente.TabIndex = 11;
-            this.addCliente.Text = "Agregar Cliente";
-            this.addCliente.Theme = ManiXButton.Theme.MSOffice2010_Green;
-            this.addCliente.UseVisualStyleBackColor = true;
-            this.addCliente.Click += new System.EventHandler(this.addCliente_Click);
-            // 
             // tableCliente
             // 
             this.tableCliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tableCliente.AutoScroll = true;
             this.tableCliente.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
             this.tableCliente.ColumnCount = 5;
-            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.72727F));
-            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.72727F));
-            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.72727F));
-            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.72727F));
-            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
+            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.25369F));
+            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.25369F));
+            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.67277F));
+            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.18618F));
+            this.tableCliente.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.633675F));
             this.tableCliente.Controls.Add(this.label21, 0, 0);
             this.tableCliente.Controls.Add(this.label22, 1, 0);
             this.tableCliente.Controls.Add(this.label23, 2, 0);
             this.tableCliente.Controls.Add(this.label24, 3, 0);
             this.tableCliente.Controls.Add(this.label25, 4, 0);
-            this.tableCliente.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableCliente.Location = new System.Drawing.Point(77, 158);
+            this.tableCliente.Location = new System.Drawing.Point(131, 107);
             this.tableCliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableCliente.MaximumSize = new System.Drawing.Size(696, 910);
+            this.tableCliente.MinimumSize = new System.Drawing.Size(696, 91);
             this.tableCliente.Name = "tableCliente";
-            this.tableCliente.RowCount = 5;
-            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableCliente.Size = new System.Drawing.Size(796, 286);
+            this.tableCliente.RowCount = 1;
+            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableCliente.Size = new System.Drawing.Size(696, 333);
             this.tableCliente.TabIndex = 10;
             // 
             // label21
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(62, 21);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(52, 158);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 17);
             this.label21.TabIndex = 0;
@@ -1146,8 +983,7 @@ namespace RoesTortilleria.views
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(238, 21);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(209, 158);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(64, 17);
             this.label22.TabIndex = 1;
@@ -1157,8 +993,7 @@ namespace RoesTortilleria.views
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(417, 21);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(333, 158);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(64, 17);
             this.label23.TabIndex = 2;
@@ -1168,8 +1003,7 @@ namespace RoesTortilleria.views
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(594, 21);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(483, 158);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(67, 17);
             this.label24.TabIndex = 3;
@@ -1179,8 +1013,7 @@ namespace RoesTortilleria.views
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(725, 21);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(628, 158);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(61, 17);
             this.label25.TabIndex = 4;
@@ -1191,7 +1024,8 @@ namespace RoesTortilleria.views
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label10.Location = new System.Drawing.Point(365, 60);
+            this.label10.Location = new System.Drawing.Point(281, 41);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(197, 55);
             this.label10.TabIndex = 9;
@@ -1247,6 +1081,172 @@ namespace RoesTortilleria.views
             this.label2.TabIndex = 3;
             this.label2.Text = "Jorge Armando Rojas Montero";
             // 
+            // btnCorte
+            // 
+            office2010Blue4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Blue4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Blue4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Blue4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Blue4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Blue4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Blue4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Blue4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Blue4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(97)))), ((int)(((byte)(181)))));
+            office2010Blue4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(125)))), ((int)(((byte)(219)))));
+            office2010Blue4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Blue4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Blue4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Blue4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Blue4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Blue4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Blue4.TextColor = System.Drawing.Color.White;
+            this.btnCorte.ColorTable = office2010Blue4;
+            this.btnCorte.Location = new System.Drawing.Point(836, 214);
+            this.btnCorte.Name = "btnCorte";
+            this.btnCorte.Size = new System.Drawing.Size(103, 44);
+            this.btnCorte.TabIndex = 5;
+            this.btnCorte.Text = "Venta del Día";
+            this.btnCorte.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
+            this.btnCorte.UseVisualStyleBackColor = true;
+            // 
+            // addVenta
+            // 
+            office2010Green4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Green4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Green4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Green4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Green4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(126)))), ((int)(((byte)(43)))));
+            office2010Green4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(184)))), ((int)(((byte)(67)))));
+            office2010Green4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Green4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Green4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Green4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Green4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Green4.TextColor = System.Drawing.Color.White;
+            this.addVenta.ColorTable = office2010Green4;
+            this.addVenta.Location = new System.Drawing.Point(835, 159);
+            this.addVenta.Margin = new System.Windows.Forms.Padding(4);
+            this.addVenta.Name = "addVenta";
+            this.addVenta.Size = new System.Drawing.Size(104, 48);
+            this.addVenta.TabIndex = 4;
+            this.addVenta.Text = "Agregar Venta";
+            this.addVenta.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addVenta.UseVisualStyleBackColor = true;
+            this.addVenta.Click += new System.EventHandler(this.addVenta_Click);
+            // 
+            // addProduccion
+            // 
+            this.addProduccion.Location = new System.Drawing.Point(755, 133);
+            this.addProduccion.Margin = new System.Windows.Forms.Padding(4);
+            this.addProduccion.Name = "addProduccion";
+            this.addProduccion.Size = new System.Drawing.Size(160, 30);
+            this.addProduccion.TabIndex = 7;
+            this.addProduccion.Text = "Agregar Producción";
+            this.addProduccion.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addProduccion.UseVisualStyleBackColor = true;
+            this.addProduccion.Click += new System.EventHandler(this.addProduccion_Click);
+            // 
+            // detalleBtn
+            // 
+            office2010Yellow4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Yellow4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Yellow4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Yellow4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Yellow4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(161)))), ((int)(((byte)(8)))));
+            office2010Yellow4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(191)))), ((int)(((byte)(45)))));
+            office2010Yellow4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Yellow4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Yellow4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Yellow4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Yellow4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Yellow4.TextColor = System.Drawing.Color.White;
+            this.detalleBtn.ColorTable = office2010Yellow4;
+            this.detalleBtn.Location = new System.Drawing.Point(777, 7);
+            this.detalleBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.detalleBtn.Name = "detalleBtn";
+            this.detalleBtn.Size = new System.Drawing.Size(102, 30);
+            this.detalleBtn.TabIndex = 8;
+            this.detalleBtn.Text = "Ver Detalle";
+            this.detalleBtn.Theme = ManiXButton.Theme.MSOffice2010_Yellow;
+            this.detalleBtn.UseVisualStyleBackColor = true;
+            this.detalleBtn.Click += new System.EventHandler(this.detalleBtn_Click);
+            // 
+            // finalizarBtn
+            // 
+            this.finalizarBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            office2010Red4.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            office2010Red4.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            office2010Red4.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red4.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red4.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            office2010Red4.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            office2010Red4.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red4.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red4.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(77)))), ((int)(((byte)(45)))));
+            office2010Red4.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(148)))), ((int)(((byte)(64)))));
+            office2010Red4.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            office2010Red4.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            office2010Red4.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            office2010Red4.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            office2010Red4.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red4.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            office2010Red4.TextColor = System.Drawing.Color.White;
+            this.finalizarBtn.ColorTable = office2010Red4;
+            this.finalizarBtn.Location = new System.Drawing.Point(777, 76);
+            this.finalizarBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.finalizarBtn.Name = "finalizarBtn";
+            this.finalizarBtn.Size = new System.Drawing.Size(102, 30);
+            this.finalizarBtn.TabIndex = 8;
+            this.finalizarBtn.Text = "Finalizar";
+            this.finalizarBtn.Theme = ManiXButton.Theme.MSOffice2010_RED;
+            this.finalizarBtn.UseVisualStyleBackColor = true;
+            this.finalizarBtn.Click += new System.EventHandler(this.finalizarBtn_Click);
+            // 
+            // addInventario
+            // 
+            this.addInventario.Location = new System.Drawing.Point(726, 323);
+            this.addInventario.Margin = new System.Windows.Forms.Padding(4);
+            this.addInventario.Name = "addInventario";
+            this.addInventario.Size = new System.Drawing.Size(149, 53);
+            this.addInventario.TabIndex = 9;
+            this.addInventario.Text = "Agregar a Inventario";
+            this.addInventario.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addInventario.UseVisualStyleBackColor = true;
+            this.addInventario.Click += new System.EventHandler(this.addInventario_Click);
+            // 
+            // addGasto
+            // 
+            this.addGasto.Location = new System.Drawing.Point(773, 110);
+            this.addGasto.Margin = new System.Windows.Forms.Padding(4);
+            this.addGasto.Name = "addGasto";
+            this.addGasto.Size = new System.Drawing.Size(100, 33);
+            this.addGasto.TabIndex = 8;
+            this.addGasto.Text = "Agregar Gasto";
+            this.addGasto.Theme = ManiXButton.Theme.MSOffice2010_Green;
+            this.addGasto.UseVisualStyleBackColor = true;
+            this.addGasto.Click += new System.EventHandler(this.addGasto_Click);
+            // 
+            // addCliente
+            // 
+            this.addCliente.Location = new System.Drawing.Point(678, 57);
+            this.addCliente.Name = "addCliente";
+            this.addCliente.Size = new System.Drawing.Size(82, 35);
+            this.addCliente.TabIndex = 11;
+            this.addCliente.Text = "Agregar Cliente";
+            this.addCliente.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
+            this.addCliente.UseVisualStyleBackColor = true;
+            this.addCliente.Click += new System.EventHandler(this.addCliente_Click);
+            // 
             // MainModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1291,113 +1291,9 @@ namespace RoesTortilleria.views
 
         }
 
+
         #endregion
-        /*
-        public void setAlmacenData()
-        {
-            SqlConnection conexion = Conexion.getConexion();
-            DateTime date = DateTime.Now;
-            string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-
-            conexion.Open();
-            string query = "SELECT * FROM Almacen";
-            SqlCommand command = new SqlCommand(query, conexion);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if( reader.Read())
-            {
-                try
-                {
-                    this.lSacosInv.Text = "" +(float)(double) reader.GetDouble(2) + " Sacos";
-                    this.lKGMInv.Text = "" + (float)(double) reader.GetDouble(3) + " KG";
-                }
-                catch (Exception e) {
-                }
-            }
-            conexion.Close();
-
-            
-        }
-
-        public void setProduccionData()
-        {
-            SqlConnection conexion = Conexion.getConexion();
-            DateTime date = DateTime.Now;
-            string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-            
-         //   Console.WriteLine(fecha);
-            conexion.Open();
-            string query = "SELECT * FROM Produccion WHERE fecha like '"+fecha+"'";
-            SqlCommand command = new SqlCommand(query, conexion);
-            SqlDataReader reader = command.ExecuteReader();
-
-            if (reader.Read())
-            {
-                try
-                {
-                    this.lSacoMaseca.Text = "" + (float)(double)reader.GetDouble(1) + " Sacos";
-                    this.lKiloMinsa.Text = "" + (float)(double)reader.GetDouble(2) + " Kg";
-                    this.lKiloMas.Text = "" + (float)(double)reader.GetDouble(3) + " Kg";
-                    this.lKGHarina.Text = "" + (float)(double)reader.GetDouble(4) + " Kg";
-                    this.lTortilla.Text = "" + (float)(double)reader.GetDouble(5) + " Kg";
-                    this.lKGSobra.Text = "" + (float)(double)reader.GetDouble(7) + " Kg";
-                    this.lFTortilla.Text = "" + (float)(double)reader.GetDouble(9) + " Kg";
-
-                    if ((float)(double)reader.GetDouble(6) != 0) {
-                        this.finalizarBtn.Enabled = false;    
-                    }
-
-                }
-                catch (Exception e)
-                {
-                }
-            }
-            else
-            {
-                this.detalleBtn.Enabled = false;
-                this.finalizarBtn.Enabled = false;
-            }
-            conexion.Close();
-            
-        }
-
-        public void setGastosData()
-        {
-
-            SqlConnection conexion = Conexion.getConexion();
-            DateTime date = DateTime.Now;
-            string fecha = date.ToString("yyyy-MM", CultureInfo.InvariantCulture);
-
-            Console.WriteLine(fecha);
-            conexion.Open();
-            string query = "SELECT * FROM Gastos WHERE fecha like '" + fecha + "%'";
-            SqlCommand command = new SqlCommand(query, conexion);
-            SqlDataReader reader = command.ExecuteReader();
-
-            while( reader.Read() )
-            {
-                try
-                {
-                    // For Add New Row (Loop this code for add multiple rows)
-                    if (reader.GetString(4) != "Si")
-                    {
-                        this.tableGastos.RowCount = this.tableGastos.RowCount + 1;
-                        this.tableGastos.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-                        this.tableGastos.Controls.Add(new Label() { Text = reader.GetString(1) }, 0, this.tableGastos.RowCount - 1);
-                        this.tableGastos.Controls.Add(new Label() { Text = Convert.ToString(reader.GetInt32(2)) }, 1, this.tableGastos.RowCount - 1);
-                        this.tableGastos.Controls.Add(new Label() { Text = Convert.ToString(reader.GetInt32(3)) }, 2, this.tableGastos.RowCount - 1);
-                        this.tableGastos.Controls.Add(new Label() { Text = reader.GetDateTime(5).ToString() }, 3, this.tableGastos.RowCount - 1);
-                    }
-                }
-                catch (Exception e)
-                {
-                }
-            }
-           
-            conexion.Close();
-            
-        }
-        */
+  
         #region items
 
         private System.Windows.Forms.TabControl tabControl;
@@ -1432,6 +1328,7 @@ namespace RoesTortilleria.views
         private ManiXButton.XButton addInventario;
         private ManiXButton.XButton addGasto;
         private ManiXButton.XButton addCliente;
+        private ManiXButton.XButton btnCorte;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
@@ -1450,8 +1347,8 @@ namespace RoesTortilleria.views
         private System.Windows.Forms.TextBox normal_900;
         private System.Windows.Forms.TextBox especial_Normal;
         private System.Windows.Forms.TextBox mostador_Sabor;
-        private System.Windows.Forms.TextBox mostrador_800;
-        private System.Windows.Forms.TextBox mostador_900;
+        private System.Windows.Forms.TextBox sabor_800;
+        private System.Windows.Forms.TextBox sabor_900;
         private System.Windows.Forms.TextBox especial_Sabor;
         private System.Windows.Forms.TextBox monto_Mostrador;
         private System.Windows.Forms.TextBox monto_800;

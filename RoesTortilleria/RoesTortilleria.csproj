@@ -91,6 +91,9 @@
     <Compile Include="views\AddVentaModule.Designer.cs">
       <DependentUpon>AddVentaModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\button.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="views\ColorTabel.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Datos.cs" />

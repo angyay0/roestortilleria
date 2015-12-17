@@ -16,21 +16,35 @@ namespace RoesTortilleria.views
     public partial class MainModule : Form
     {
         private Production production;
-               
+        static int cantidad;
+        static int normal;
+        static int sabor;
+        static int total;
+        static int count;
+        static string nombre, contacto, telefono, direccion, id;
+
+
         public MainModule()
         {
             InitializeComponent();
 
             production = new Production();
-
+            DateTime date = DateTime.Now;
+            string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            SetValores(fecha, "Mostrador");
+            SetValores(fecha, "800gr");
+            SetValores(fecha, "900gr");
+            SetValores(fecha, "especialOasis");
+            SetClientes();
             setGastosData();
             setAlmacenData();
             setProduccionData();
         }
 
+        #region EventosVistas
         private void addVenta_Click(object sender, EventArgs e)
         {
-            AddVentaModule addventa = new AddVentaModule();
+            AddVentaModule addventa = new AddVentaModule(this);
             addventa.ShowDialog();
 
         }
@@ -55,10 +69,12 @@ namespace RoesTortilleria.views
 
         private void addCliente_Click(object sender, EventArgs e)
         {
-            AddClienteModule addcliente = new AddClienteModule();
+            AddClienteModule addcliente = new AddClienteModule(this);
             addcliente.ShowDialog();
         }
-        
+        #endregion Eventos Vistas
+
+        #region setters
         public void setAlmacenData()
         {
             SqlConnection conexion = Conexion.getConexion();
@@ -300,9 +316,160 @@ namespace RoesTortilleria.views
 
         }
 
+        public void SetClientes()
+        {
+            DataTable clientedt = Datos.BuscarClientes();
+            for (int x = 0; x < clientedt.Rows.Count; x++)
+            {
+                DataRow row = clientedt.Rows[x];
+                //guardo datos en variables
+                nombre = Convert.ToString(row["Nombre"]);
+                contacto = Convert.ToString(row["Contacto"]);
+                telefono = Convert.ToString(row["Telefono"]);
+                direccion = Convert.ToString(row["Direccion"]);
+                id = Convert.ToString(row["idCliente"]);
+                addRowToTableG(getTableClientes(), new RowStyle(SizeType.Absolute, 40F),
+                    new string[] { nombre, contacto, telefono, direccion, id });
+            }
+
+
+        }
+
+        public void SetValores(string fecha, string concepto)
+        {
+            cantidad = 0;
+            normal = 0;
+            sabor = 0;
+            total = 0;
+
+            if (concepto == "Mostrador")
+            {
+                DataTable dt = Datos.setVentas(fecha, concepto);
+                if (dt.Rows.Count == 0)
+                {
+                    cantidadMostrador.Text = Convert.ToString(cantidad);
+                    mostrador_Normal.Text = Convert.ToString(normal);
+                    mostador_Sabor.Text = Convert.ToString(sabor);
+                    monto_Mostrador.Text = Convert.ToString("$" + total + ".00");
+                }
+                else
+                {
+                    for (int x = 0; x < dt.Rows.Count; x++)
+                    {
+                        DataRow row = dt.Rows[x];
+                        //guardo datos en variables
+                        cantidad = cantidad + Convert.ToInt32(row["Cantidad"]);
+                        normal = normal + Convert.ToInt32(row["Normal"]);
+                        sabor = sabor + Convert.ToInt32(row["sabor"]);
+                        total = total + Convert.ToInt32(row["Total"]);
+
+                        cantidadMostrador.Text = Convert.ToString(cantidad);
+                        mostrador_Normal.Text = Convert.ToString(normal);
+                        mostador_Sabor.Text = Convert.ToString(sabor);
+                        monto_Mostrador.Text = Convert.ToString("$" + total + ".00");
+                    }
+                }
+            }
+            else if (concepto == "800gr")
+            {
+
+                DataTable dt = Datos.setVentas(fecha, concepto);
+                if (dt.Rows.Count == 0)
+                {
+                    cantidad_800.Text = Convert.ToString(cantidad);
+                    normal_800.Text = Convert.ToString(normal);
+                    sabor_800.Text = Convert.ToString(sabor);
+                    monto_800.Text = Convert.ToString("$" + total + ".00");
+                }
+                else
+                {
+                    for (int x = 0; x < dt.Rows.Count; x++)
+                    {
+                        DataRow row = dt.Rows[x];
+                        //guardo datos en variables
+                        cantidad = cantidad + Convert.ToInt32(row["Cantidad"]);
+                        normal = normal + Convert.ToInt32(row["Normal"]);
+                        sabor = sabor + Convert.ToInt32(row["sabor"]);
+                        total = total + Convert.ToInt32(row["Total"]);
+
+                        cantidad_800.Text = Convert.ToString(cantidad);
+                        normal_800.Text = Convert.ToString(normal);
+                        sabor_800.Text = Convert.ToString(sabor);
+                        monto_800.Text = Convert.ToString("$" + total + ".00");
+                    }
+                }
+            }
+            else if (concepto == "900gr")
+            {
+
+                DataTable dt = Datos.setVentas(fecha, concepto);
+                if (dt.Rows.Count == 0)
+                {
+                    cantidad_900.Text = Convert.ToString(cantidad);
+                    normal_900.Text = Convert.ToString(normal);
+                    sabor_900.Text = Convert.ToString(sabor);
+                    monto_900.Text = Convert.ToString("$" + total + ".00");
+                }
+                else
+                {
+                    for (int x = 0; x < dt.Rows.Count; x++)
+                    {
+                        DataRow row = dt.Rows[x];
+                        //guardo datos en variables
+                        cantidad = cantidad + Convert.ToInt32(row["Cantidad"]);
+                        normal = normal + Convert.ToInt32(row["Normal"]);
+                        sabor = sabor + Convert.ToInt32(row["sabor"]);
+                        total = total + Convert.ToInt32(row["Total"]);
+
+                        cantidad_900.Text = Convert.ToString(cantidad);
+                        normal_900.Text = Convert.ToString(normal);
+                        sabor_900.Text = Convert.ToString(sabor);
+                        monto_900.Text = Convert.ToString("$" + total + ".00");
+                    }
+                }
+            }
+            else if (concepto == "especialOasis")
+            {
+
+                DataTable dt = Datos.setVentas(fecha, concepto);
+                if (dt.Rows.Count == 0)
+                {
+                    especial_cantidad.Text = Convert.ToString(cantidad);
+                    especial_Normal.Text = Convert.ToString(normal);
+                    especial_Sabor.Text = Convert.ToString(sabor);
+                    especial_monto.Text = Convert.ToString("$" + total + ".00");
+                }
+                else
+                {
+                    for (int x = 0; x < dt.Rows.Count; x++)
+                    {
+                        DataRow row = dt.Rows[x];
+                        //guardo datos en variables
+                        cantidad = cantidad + Convert.ToInt32(row["Cantidad"]);
+                        normal = normal + Convert.ToInt32(row["Normal"]);
+                        sabor = sabor + Convert.ToInt32(row["sabor"]);
+                        total = total + Convert.ToInt32(row["Total"]);
+
+                        especial_cantidad.Text = Convert.ToString(cantidad);
+                        especial_Normal.Text = Convert.ToString(normal);
+                        especial_Sabor.Text = Convert.ToString(sabor);
+                        especial_monto.Text = Convert.ToString("$" + total + ".00");
+                    }
+                }
+            }
+
+
+        }
+#endregion setters
+
         public TableLayoutPanel getTableGastos()
         {
             return this.tableGastos;
+        }
+
+        public TableLayoutPanel getTableClientes()
+        {
+            return this.tableCliente;
         }
 
         public void addRowToTable(TableLayoutPanel panel, RowStyle row,string[] p) {
@@ -315,9 +482,119 @@ namespace RoesTortilleria.views
             
         }
 
+        public void addRowToTableG(TableLayoutPanel panel, RowStyle row, string[] p)
+        {
+            panel.RowCount = panel.RowCount + 1;
+            panel.RowStyles.Add(row);
+
+            for (int i = 0; i < p.Length; i++)
+            {
+                if (i == 4)
+                {
+                    setButtons(panel, i);
+                }
+                else
+                {
+
+                    panel.Controls.Add(new Label() { Text = Convert.ToString(p[i]), Size = new System.Drawing.Size(220, 13) }, i, panel.RowCount - 1);
+                }
+            }
+
+        }
+
+        public void setButtons(TableLayoutPanel panel, int i)
+        {
+            //MessageBox.Show(Convert.ToString(tableCliente.RowCount-1));
+            Button btn = new button(tableCliente.RowCount - 1);
+            btn.Text = "Eliminar";
+            btn.Name = id;
+            btn.Click += new EventHandler(this.btnDelet);
+            panel.Controls.Add(btn, i, panel.RowCount - 1);
+
+
+        }
+
+        private void btnDelet(object sender, EventArgs e)
+        {
+            button btn = sender as button;
+            int delete = Convert.ToInt32(btn.Name);
+            int id = btn.getId();
+            //MessageBox.Show(Convert.ToString(id));
+            DialogResult result = MessageBox.Show("Seguro que deseas eliminar?", "Eliminar", MessageBoxButtons.YesNo);
+
+            switch (result)
+            {
+                case DialogResult.Yes:
+                    Datos.deleteCliente(delete);
+                    remove_row(tableCliente, id);
+                    //setButtons(tableCliente,4);
+
+                    break;
+                case DialogResult.No:
+                    break;
+            }
+
+        }
+
+        private void remove_row(TableLayoutPanel panel, int row_index_to_remove)
+        {
+            if (row_index_to_remove >= panel.RowCount)
+            {
+                MessageBox.Show("No puedo borrar por que la tabla es de tamaño " + panel.RowCount + " y tu quieres borrar el" + row_index_to_remove);
+                return;
+            }
+
+            // delete all controls of row that we want to delete
+            for (int i = 0; i < panel.ColumnCount; i++)
+            {
+                var control = panel.GetControlFromPosition(i, row_index_to_remove);
+                panel.Controls.Remove(control);
+
+            }
+
+            // move up row controls that comes after row we want to remove
+            for (int i = row_index_to_remove + 1; i < panel.RowCount; i++)
+            {
+                for (int j = 0; j < panel.ColumnCount; j++)
+                {
+                    var control = panel.GetControlFromPosition(j, i);
+                    if (control != null)
+                    {
+                        panel.SetRow(control, i - 1);
+                        if (j == 4)
+                        {
+                            button controlbtn = control as button;
+                            //Aqui se modifica el boton
+                            if (controlbtn != null)
+                            {
+                                if (controlbtn.getId() > 0)
+                                {
+                                    controlbtn.setId(controlbtn.getId() - 1);
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+            // remove last row
+            panel.RowStyles.RemoveAt(panel.RowCount - 1);
+            panel.RowCount--;
+        }
+
         private void datePickerProd_ValueChanged(object sender, EventArgs e)
         {
             setProduccionData(this.datePickerProd.Value);
+        }
+
+        private void datePickerVenta_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime fechaSelect = datePickerVenta.Value;
+            string fecha = fechaSelect.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
+            SetValores(fecha, "Mostrador");
+            SetValores(fecha, "800gr");
+            SetValores(fecha, "900gr");
+            SetValores(fecha, "especialOasis");
         }
 
         private void finalizarBtn_Click(object sender, EventArgs e)
