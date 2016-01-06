@@ -24,6 +24,25 @@ namespace RoesTortilleria
             return reader.Read();
             conexion.Close();
         }
+
+        public static string[] LogIn(String Usuario, String Contraseña,bool flag)
+        {
+            string[] data = new string[2];
+
+            SqlConnection conexion = Conexion.getConexion();
+            conexion.Open();
+            String query = "Select Nombre, Tipo From SysUsuarios Where Usuario = '" + Usuario + "' and Password = '" + Contraseña + "'";
+            SqlCommand command = new SqlCommand(query, conexion);
+            SqlDataReader reader = command.ExecuteReader();
+            if( reader.Read())
+            {
+                data[0] = reader.GetString(0);
+                data[1] = reader.GetString(1);
+            }
+
+            return data;
+            conexion.Close();
+        }
         #endregion
 
         #region AddCliente

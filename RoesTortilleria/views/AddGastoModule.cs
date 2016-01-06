@@ -53,7 +53,9 @@ namespace RoesTortilleria.views
                 MessageBox.Show("Agregado Exitosamente!", "Correcto");
                 module.addRowToTable(module.getTableGastos(), new RowStyle(SizeType.Absolute, 40F),
                     new string[] { this.conceptoGasto.Text, this.cantidadGasto.Text, this.totalBox.Text,fecha });
-            }catch(Exception e)
+                module.updateGastos((float) Convert.ToInt32(this.totalBox.Text));
+            }
+            catch(Exception e)
             {
                 MessageBox.Show(e.Message, "ERROR");
             }

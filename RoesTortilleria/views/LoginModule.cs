@@ -19,10 +19,12 @@ namespace RoesTortilleria.views
 
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            if (Datos.LogIn(username.Text, password.Text))
+            string[] data = Datos.LogIn(username.Text, password.Text,true);
+
+            if (data != null )
             {
 
-                MainModule main = new MainModule();
+                MainModule main = new MainModule(data[0],data[1]);
                 this.Hide();
                 main.ShowDialog();
                 username.Text = "";

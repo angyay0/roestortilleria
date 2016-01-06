@@ -38,6 +38,7 @@ namespace RoesTortilleria.views
             ManiXButton.Office2010Yellow office2010Yellow1 = new ManiXButton.Office2010Yellow();
             ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainModule));
+            ManiXButton.Colortable colortable1 = new ManiXButton.Colortable();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabVenta = new System.Windows.Forms.TabPage();
             this.btnCorte = new ManiXButton.XButton();
@@ -104,6 +105,7 @@ namespace RoesTortilleria.views
             this.lSacosInv = new System.Windows.Forms.Label();
             this.lKGMInv = new System.Windows.Forms.Label();
             this.tabGastos = new System.Windows.Forms.TabPage();
+            this.montoTotal = new System.Windows.Forms.Label();
             this.addGasto = new ManiXButton.XButton();
             this.label9 = new System.Windows.Forms.Label();
             this.tableGastos = new System.Windows.Forms.TableLayoutPanel();
@@ -123,8 +125,16 @@ namespace RoesTortilleria.views
             this.tabFactNot = new System.Windows.Forms.TabPage();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usertype = new System.Windows.Forms.Label();
+            this.username = new System.Windows.Forms.Label();
+            this.tabSysUser = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
+            this.xButton1 = new ManiXButton.XButton();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabVenta.SuspendLayout();
             this.tableVenta.SuspendLayout();
@@ -139,6 +149,8 @@ namespace RoesTortilleria.views
             this.tableCliente.SuspendLayout();
             this.tabFactNot.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabSysUser.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -150,6 +162,7 @@ namespace RoesTortilleria.views
             this.tabControl.Controls.Add(this.tabGastos);
             this.tabControl.Controls.Add(this.tabClientes);
             this.tabControl.Controls.Add(this.tabFactNot);
+            this.tabControl.Controls.Add(this.tabSysUser);
             this.tabControl.Location = new System.Drawing.Point(5, 49);
             this.tabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl.Name = "tabControl";
@@ -989,6 +1002,7 @@ namespace RoesTortilleria.views
             // tabGastos
             // 
             this.tabGastos.BackColor = System.Drawing.SystemColors.Control;
+            this.tabGastos.Controls.Add(this.montoTotal);
             this.tabGastos.Controls.Add(this.addGasto);
             this.tabGastos.Controls.Add(this.label9);
             this.tabGastos.Controls.Add(this.tableGastos);
@@ -999,6 +1013,16 @@ namespace RoesTortilleria.views
             this.tabGastos.Size = new System.Drawing.Size(953, 505);
             this.tabGastos.TabIndex = 5;
             this.tabGastos.Text = "Gastos";
+            // 
+            // montoTotal
+            // 
+            this.montoTotal.AutoSize = true;
+            this.montoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.montoTotal.Location = new System.Drawing.Point(420, 111);
+            this.montoTotal.Name = "montoTotal";
+            this.montoTotal.Size = new System.Drawing.Size(66, 25);
+            this.montoTotal.TabIndex = 9;
+            this.montoTotal.Text = "$0.00";
             // 
             // addGasto
             // 
@@ -1018,7 +1042,7 @@ namespace RoesTortilleria.views
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.ForestGreen;
-            this.label9.Location = new System.Drawing.Point(283, 70);
+            this.label9.Location = new System.Drawing.Point(283, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(357, 55);
             this.label9.TabIndex = 7;
@@ -1043,7 +1067,7 @@ namespace RoesTortilleria.views
             this.tableGastos.MinimumSize = new System.Drawing.Size(796, 91);
             this.tableGastos.Name = "tableGastos";
             this.tableGastos.RowCount = 1;
-            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 299F));
+            this.tableGastos.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 314F));
             this.tableGastos.Size = new System.Drawing.Size(796, 302);
             this.tableGastos.TabIndex = 1;
             // 
@@ -1051,7 +1075,7 @@ namespace RoesTortilleria.views
             // 
             this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(101, 144);
+            this.label35.Location = new System.Drawing.Point(97, 151);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(85, 17);
             this.label35.TabIndex = 0;
@@ -1062,7 +1086,7 @@ namespace RoesTortilleria.views
             this.label36.AllowDrop = true;
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(309, 144);
+            this.label36.Location = new System.Drawing.Point(300, 151);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(77, 17);
             this.label36.TabIndex = 1;
@@ -1072,7 +1096,7 @@ namespace RoesTortilleria.views
             // 
             this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(471, 144);
+            this.label37.Location = new System.Drawing.Point(458, 151);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(54, 17);
             this.label37.TabIndex = 2;
@@ -1082,7 +1106,7 @@ namespace RoesTortilleria.views
             // 
             this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(664, 144);
+            this.label38.Location = new System.Drawing.Point(646, 151);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(53, 17);
             this.label38.TabIndex = 3;
@@ -1124,7 +1148,7 @@ namespace RoesTortilleria.views
             this.tableCliente.MinimumSize = new System.Drawing.Size(696, 91);
             this.tableCliente.Name = "tableCliente";
             this.tableCliente.RowCount = 1;
-            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 330F));
+            this.tableCliente.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 345F));
             this.tableCliente.Size = new System.Drawing.Size(696, 333);
             this.tableCliente.TabIndex = 10;
             // 
@@ -1132,7 +1156,7 @@ namespace RoesTortilleria.views
             // 
             this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(52, 159);
+            this.label21.Location = new System.Drawing.Point(50, 167);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 17);
             this.label21.TabIndex = 0;
@@ -1142,7 +1166,7 @@ namespace RoesTortilleria.views
             // 
             this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(209, 159);
+            this.label22.Location = new System.Drawing.Point(202, 167);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(64, 17);
             this.label22.TabIndex = 1;
@@ -1152,7 +1176,7 @@ namespace RoesTortilleria.views
             // 
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(333, 159);
+            this.label23.Location = new System.Drawing.Point(322, 167);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(64, 17);
             this.label23.TabIndex = 2;
@@ -1162,7 +1186,7 @@ namespace RoesTortilleria.views
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(483, 159);
+            this.label24.Location = new System.Drawing.Point(467, 167);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(67, 17);
             this.label24.TabIndex = 3;
@@ -1172,9 +1196,9 @@ namespace RoesTortilleria.views
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(628, 159);
+            this.label25.Location = new System.Drawing.Point(612, 158);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(61, 17);
+            this.label25.Size = new System.Drawing.Size(53, 34);
             this.label25.TabIndex = 4;
             this.label25.Text = "Slección";
             // 
@@ -1234,31 +1258,149 @@ namespace RoesTortilleria.views
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // usertype
+            // 
+            this.usertype.AutoSize = true;
+            this.usertype.Location = new System.Drawing.Point(781, 30);
+            this.usertype.Name = "usertype";
+            this.usertype.Size = new System.Drawing.Size(55, 17);
+            this.usertype.TabIndex = 2;
+            this.usertype.Text = "[Admin]";
+            // 
+            // username
+            // 
+            this.username.AutoSize = true;
+            this.username.Location = new System.Drawing.Point(635, 5);
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(201, 17);
+            this.username.TabIndex = 3;
+            this.username.Text = "Jorge Armando Rojas Montero";
+            // 
+            // tabSysUser
+            // 
+            this.tabSysUser.BackColor = System.Drawing.SystemColors.Control;
+            this.tabSysUser.Controls.Add(this.tableLayoutPanel1);
+            this.tabSysUser.Controls.Add(this.xButton1);
+            this.tabSysUser.Controls.Add(this.label1);
+            this.tabSysUser.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabSysUser.Location = new System.Drawing.Point(4, 25);
+            this.tabSysUser.Name = "tabSysUser";
+            this.tabSysUser.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSysUser.Size = new System.Drawing.Size(953, 505);
+            this.tabSysUser.TabIndex = 8;
+            this.tabSysUser.Text = "Usuarios del Sistema";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(781, 30);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(324, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "[Admin]";
+            this.label1.Size = new System.Drawing.Size(283, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Usuarios del Sistema";
+            // 
+            // xButton1
+            // 
+            colortable1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            colortable1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            colortable1.ButtonMouseOverColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            colortable1.ButtonMouseOverColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            colortable1.ButtonMouseOverColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(225)))), ((int)(((byte)(137)))));
+            colortable1.ButtonMouseOverColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(249)))), ((int)(((byte)(224)))));
+            colortable1.ButtonNormalColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
+            colortable1.ButtonNormalColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
+            colortable1.ButtonNormalColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(97)))), ((int)(((byte)(181)))));
+            colortable1.ButtonNormalColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(125)))), ((int)(((byte)(219)))));
+            colortable1.ButtonSelectedColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(199)))), ((int)(((byte)(87)))));
+            colortable1.ButtonSelectedColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(243)))), ((int)(((byte)(215)))));
+            colortable1.ButtonSelectedColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(229)))), ((int)(((byte)(117)))));
+            colortable1.ButtonSelectedColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(216)))), ((int)(((byte)(107)))));
+            colortable1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            colortable1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
+            colortable1.TextColor = System.Drawing.Color.White;
+            this.xButton1.ColorTable = colortable1;
+            this.xButton1.Location = new System.Drawing.Point(666, 30);
+            this.xButton1.Name = "xButton1";
+            this.xButton1.Size = new System.Drawing.Size(81, 40);
+            this.xButton1.TabIndex = 1;
+            this.xButton1.Text = "Agregar";
+            this.xButton1.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
+            this.xButton1.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoScroll = true;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.5471F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.07969F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.29662F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.07658F));
+            this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label39, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label40, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label41, 3, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(78, 101);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.MaximumSize = new System.Drawing.Size(796, 910);
+            this.tableLayoutPanel1.MinimumSize = new System.Drawing.Size(796, 91);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 302);
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(635, 6);
+            this.label2.Location = new System.Drawing.Point(35, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Jorge Armando Rojas Montero";
+            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Usuario";
+            // 
+            // label39
+            // 
+            this.label39.AllowDrop = true;
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(238, 9);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(58, 17);
+            this.label39.TabIndex = 1;
+            this.label39.Text = "Nombre";
+            // 
+            // label40
+            // 
+            this.label40.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(508, 9);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(66, 17);
+            this.label40.TabIndex = 2;
+            this.label40.Text = "Permisos";
+            // 
+            // label41
+            // 
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(693, 9);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(81, 17);
+            this.label41.TabIndex = 3;
+            this.label41.Text = "Contraseña";
             // 
             // MainModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(972, 591);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.username);
+            this.Controls.Add(this.usertype);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1291,6 +1433,10 @@ namespace RoesTortilleria.views
             this.tabFactNot.ResumeLayout(false);
             this.tabFactNot.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabSysUser.ResumeLayout(false);
+            this.tabSysUser.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1310,8 +1456,8 @@ namespace RoesTortilleria.views
         private System.Windows.Forms.TabPage tabClientes;
         private System.Windows.Forms.TabPage tabFactNot;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label usertype;
+        private System.Windows.Forms.Label username;
         private System.Windows.Forms.TableLayoutPanel tableVenta;
         private System.Windows.Forms.DateTimePicker datePickerVenta;
         private System.Windows.Forms.Label label3;
@@ -1391,5 +1537,14 @@ namespace RoesTortilleria.views
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
+        private Label montoTotal;
+        private TabPage tabSysUser;
+        private ManiXButton.XButton xButton1;
+        private Label label1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label label2;
+        private Label label39;
+        private Label label40;
+        private Label label41;
     }
 }

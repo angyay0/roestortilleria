@@ -16,18 +16,37 @@ namespace RoesTortilleria.views
     public partial class MainModule : Form
     {
         private Production production;
+        static double totalGastos;
         static int cantidad;
         static int normal;
         static int sabor;
         static int total;
         static int count;
         static string nombre, contacto, telefono, direccion, id;
+        static bool admin = false;
 
 
-        public MainModule()
+        public MainModule(string user,string type)
         {
             InitializeComponent();
-
+            totalGastos = 0;
+            
+            this.username.Text = user;
+            this.usertype.Text = "["+type+"]";
+            
+            if( type.Equals("Admin"))
+            {
+                admin = true;
+               
+            }
+            else
+            {
+                this.tabControl.TabPages.Remove(this.tabCorte);
+                this.tabControl.TabPages.Remove(this.tabFactNot);
+                this.tabControl.TabPages.Remove(this.tabSysUser);
+                this.btnCorte.Hide();
+                this.tableGastos.Hide();
+            }
             production = new Production();
             DateTime date = DateTime.Now;
             string fecha = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
@@ -299,6 +318,7 @@ namespace RoesTortilleria.views
                     // For Add New Row (Loop this code for add multiple rows)
                     if (reader.GetString(4) != "Si")
                     {
+                        totalGastos += reader.GetInt32(3);
                         this.tableGastos.RowCount = this.tableGastos.RowCount + 1;
                         this.tableGastos.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
                         this.tableGastos.Controls.Add(new Label() { Text = reader.GetString(1) }, 0, this.tableGastos.RowCount - 1);
@@ -314,6 +334,14 @@ namespace RoesTortilleria.views
 
             conexion.Close();
 
+            this.montoTotal.Text = "$" + totalGastos;
+
+        }
+
+        public void updateGastos(float value)
+        {
+            totalGastos += value;
+            this.montoTotal.Text = "$" + totalGastos;
         }
 
         public void SetClientes()
@@ -614,6 +642,7 @@ namespace RoesTortilleria.views
             ShowDetail details = new ShowDetail(this.datePickerProd.Value);
             details.ShowDialog();
         }
+
 
     }
 }
